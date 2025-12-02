@@ -21,8 +21,9 @@ export default function LoginPage() {
 
     useEffect(() => {
         const fetchTenants = async () => {
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
             try {
-                const response = await fetch("http://localhost:3001/tenants");
+                const response = await fetch(`${apiUrl}/tenants`);
                 const data = await response.json();
                 setTenants(data);
             } catch (error) {

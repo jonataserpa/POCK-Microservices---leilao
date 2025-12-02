@@ -2,9 +2,11 @@ import { Header, Footer, CampaignCard, Campaign } from "@repo/ui-kit";
 
 async function getCampaigns(): Promise<Campaign[]> {
   try {
-    const res = await fetch('http://localhost:3001/campaigns', { next: { revalidate: 60 } });
+    const res = await fetch("http://localhost:3001/campaigns", {
+      next: { revalidate: 60 },
+    });
     if (!res.ok) {
-      throw new Error('Failed to fetch data');
+      throw new Error("Failed to fetch data");
     }
     return res.json();
   } catch (error) {
@@ -15,9 +17,11 @@ async function getCampaigns(): Promise<Campaign[]> {
 
 async function getTenants(): Promise<{ id: string; name: string }[]> {
   try {
-    const res = await fetch('http://localhost:3001/tenants', { next: { revalidate: 60 } });
+    const res = await fetch("http://localhost:3001/tenants", {
+      next: { revalidate: 60 },
+    });
     if (!res.ok) {
-      throw new Error('Failed to fetch tenants');
+      throw new Error("Failed to fetch tenants");
     }
     return res.json();
   } catch (error) {
@@ -26,32 +30,36 @@ async function getTenants(): Promise<{ id: string; name: string }[]> {
   }
 }
 
-export default async function Home({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>;
+}) {
   const params = await searchParams;
-  const lang = params.lang || 'pt-BR';
+  const lang = params.lang || "pt-BR";
 
   const [campaigns, tenants] = await Promise.all([
     getCampaigns(),
-    getTenants()
+    getTenants(),
   ]);
 
-  const filteredCampaigns = campaigns.filter(c => c.lang === lang);
+  const filteredCampaigns = campaigns.filter((c) => c.lang === lang);
 
-  const campaignsWithTenant = filteredCampaigns.map(campaign => ({
+  const campaignsWithTenant = filteredCampaigns.map((campaign) => ({
     ...campaign,
-    tenantName: tenants.find(t => t.id === campaign.tenantId)?.name
+    tenantName: tenants.find((t) => t.id === campaign.tenantId)?.name,
   }));
 
   const headerTheme = {
-    layout: 'horizontal-left' as const,
+    layout: "horizontal-left" as const,
     info: {
       showLanguages: true,
-      position: 'right' as const
+      position: "right" as const,
     },
     styles: {
-      backgroundColor: 'rgba(255, 255, 255, 0.95)',
-      textColor: '#111827'
-    }
+      backgroundColor: "rgba(255, 255, 255, 0.95)",
+      textColor: "#111827",
+    },
   };
 
   return (
@@ -71,13 +79,21 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ l
         {campaignsWithTenant.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {campaignsWithTenant.map((campaign, index) => (
-              <CampaignCard key={campaign.id} campaign={campaign} priority={index < 6} />
+              <CampaignCard
+                key={campaign.id}
+                campaign={campaign}
+                priority={index < 6}
+              />
             ))}
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">Nenhuma campanha encontrada para o idioma selecionado ({lang}).</p>
-            <p className="text-sm text-gray-400 mt-2">Tente mudar o idioma no topo da página.</p>
+            <p className="text-gray-500 text-lg">
+              Nenhuma campanha encontrada para o idioma selecionado ({lang}).
+            </p>
+            <p className="text-sm text-gray-400 mt-2">
+              Tente mudar o idioma no topo da página.
+            </p>
           </div>
         )}
       </main>

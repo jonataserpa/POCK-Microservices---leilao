@@ -44,8 +44,9 @@ export function CampaignsTable({
 
     const handleDelete = async (id: number) => {
         if (confirm("Tem certeza que deseja excluir esta campanha?")) {
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
             try {
-                await fetch(`http://localhost:3001/campaigns/${id}`, {
+                await fetch(`${apiUrl}/campaigns/${id}`, {
                     method: "DELETE",
                 });
                 setCampaigns(campaigns.filter((c) => c.id !== id));
@@ -58,10 +59,11 @@ export function CampaignsTable({
 
     const handleSubmit = async (data: any) => {
         try {
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
             if (editingCampaign) {
                 // Update
                 const res = await fetch(
-                    `http://localhost:3001/campaigns/${editingCampaign.id}`,
+                    `${apiUrl}/campaigns/${editingCampaign.id}`,
                     {
                         method: "PUT",
                         headers: { "Content-Type": "application/json" },
@@ -76,7 +78,7 @@ export function CampaignsTable({
                 );
             } else {
                 // Create
-                const res = await fetch(`http://localhost:3001/campaigns`, {
+                const res = await fetch(`${apiUrl}/campaigns`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ ...data, cars: [] }),

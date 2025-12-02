@@ -27,8 +27,9 @@ export default function SettingsPage({ params }: SettingsPageProps) {
     }, [tenantId]);
 
     const fetchTenant = async () => {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
         try {
-            const res = await fetch(`http://localhost:3001/tenants?id=${tenantId}`);
+            const res = await fetch(`${apiUrl}/tenants?id=${tenantId}`);
             const data = await res.json();
             if (data && data.length > 0) {
                 const t = data[0];
@@ -74,7 +75,8 @@ export default function SettingsPage({ params }: SettingsPageProps) {
         };
 
         try {
-            await fetch(`http://localhost:3001/tenants/${tenant.id}`, {
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+            await fetch(`${apiUrl}/tenants/${tenant.id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

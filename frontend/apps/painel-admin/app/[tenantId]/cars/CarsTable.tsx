@@ -63,8 +63,9 @@ export function CarsTable({ initialCampaigns, tenantId }: CarsTableProps) {
 
                 const updatedCars = campaign.cars.filter((c) => c.id !== carId);
                 const updatedCampaign = { ...campaign, cars: updatedCars };
+                const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
-                await fetch(`http://localhost:3001/campaigns/${campaignId}`, {
+                await fetch(`${apiUrl}/campaigns/${campaignId}`, {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(updatedCampaign),
@@ -99,8 +100,9 @@ export function CarsTable({ initialCampaigns, tenantId }: CarsTableProps) {
             }
 
             const updatedCampaign = { ...campaign, cars: updatedCars };
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
-            await fetch(`http://localhost:3001/campaigns/${campaignId}`, {
+            await fetch(`${apiUrl}/campaigns/${campaignId}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(updatedCampaign),

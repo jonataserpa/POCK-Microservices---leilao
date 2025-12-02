@@ -1,0 +1,67 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: painel-admin-tls
+  namespace: default
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`painel-admin.jonataserpa.com.br`)
+      kind: Rule
+      services:
+        - name: painel-admin
+          port: 80
+  tls:
+    certResolver: myresolver
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: portal-publico-tls
+  namespace: default
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`portal.jonataserpa.com.br`)
+      kind: Rule
+      services:
+        - name: portal-publico
+          port: 80
+  tls:
+    certResolver: myresolver
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: mock-server-tls
+  namespace: default
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`api.jonataserpa.com.br`)
+      kind: Rule
+      services:
+        - name: mock-server
+          port: 80
+  tls:
+    certResolver: myresolver
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: frontend-http-redirect
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`painel-admin.jonataserpa.com.br`) || Host(`portal.jonataserpa.com.br`) || Host(`api.jonataserpa.com.br`)
+      kind: Rule
+      services:
+        - name: noop-service # This is just a placeholder, the middleware handles the redirect
+          kind: TraefikService # Or just point to one of the services, it doesn't matter much as it redirects
+      middlewares:
+        - name: redirect-https

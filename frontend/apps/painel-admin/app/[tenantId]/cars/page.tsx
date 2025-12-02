@@ -16,8 +16,9 @@ interface Campaign {
 }
 
 async function getCampaigns(tenantId: string): Promise<Campaign[]> {
+    const apiUrl = process.env.API_URL || 'http://localhost:3001';
     const res = await fetch(
-        `http://localhost:3001/campaigns?tenantId=${tenantId}`,
+        `${apiUrl}/campaigns?tenantId=${tenantId}`,
         { cache: "no-store" }
     );
     if (!res.ok) {
