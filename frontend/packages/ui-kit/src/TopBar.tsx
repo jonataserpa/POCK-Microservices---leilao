@@ -1,8 +1,6 @@
-interface TopBarProps {
-    tenantId: string;
-}
 
-export function TopBar({ tenantId }: TopBarProps) {
+
+export function TopBar() {
     return (
         <header className="h-20 bg-white flex items-center justify-between px-12 fixed top-0 right-0 left-64 z-10 border-b border-gray-100">
             <div>

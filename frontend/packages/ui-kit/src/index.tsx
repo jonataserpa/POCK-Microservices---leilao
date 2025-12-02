@@ -68,7 +68,6 @@ export interface Campaign {
 }
 
 export function CampaignCard({ campaign, priority = false }: { campaign: Campaign; priority?: boolean }) {
-    const status = campaign.status || 'active';
     const image = campaign.heroImage || 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop';
     const title = campaign.title || campaign.name;
     const endDate = campaign.validUntil ? new Date(campaign.validUntil).toLocaleDateString() : 'N/A';
