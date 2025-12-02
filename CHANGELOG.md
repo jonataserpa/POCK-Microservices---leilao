@@ -62,3 +62,8 @@
 - **Menu Persistence**: Fixed `db.json` to ensure consistent menu items ("Leilões Ativos", "Vender", "Sobre") across all tenants.
 - **Campaign Cards**: Added Tenant Name badge to campaign cards on the homepage for better identification.
 - **Campaign Route 404**: Fixed 404 error on campaign detail pages (e.g., `globex_auto/electric-future`) by implementing language fallback logic.
+
+### Authentication & Security
+- **Logout**: Implemented functional logout in `painel-admin` that clears session and redirects to login.
+- **Route Protection**: Added Middleware to `painel-admin` to protect tenant routes (`/[tenantId]/*`) requiring authentication.
+- **Sidebar**: Updated `Sidebar` component in `ui-kit` to support `onLogout` callback.
