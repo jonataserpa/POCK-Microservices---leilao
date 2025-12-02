@@ -25,7 +25,7 @@ interface CarsTableProps {
     tenantId: string;
 }
 
-export function CarsTable({ initialCampaigns, tenantId }: CarsTableProps) {
+export function CarsTable({ initialCampaigns }: CarsTableProps) {
     const router = useRouter();
     const [campaigns, setCampaigns] = useState<Campaign[]>(initialCampaigns);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -81,7 +81,7 @@ export function CarsTable({ initialCampaigns, tenantId }: CarsTableProps) {
         }
     };
 
-    const handleSubmit = async (carData: any, campaignId: number) => {
+    const handleSubmit = async (carData: Partial<Car>, campaignId: number) => {
         try {
             const campaign = campaigns.find((c) => c.id === campaignId);
             if (!campaign) return;
@@ -90,13 +90,13 @@ export function CarsTable({ initialCampaigns, tenantId }: CarsTableProps) {
             if (editingCar) {
                 // Update existing car
                 updatedCars = campaign.cars.map((c) =>
-                    c.id === editingCar.id ? { ...carData, id: editingCar.id } : c
+                    c.id === editingCar.id ? { ...c, ...carData } as Car : c
                 );
             } else {
                 // Create new car
                 // Generate a pseudo-random ID (in real app backend handles this)
                 const newId = Math.floor(Math.random() * 100000);
-                updatedCars = [...(campaign.cars || []), { ...carData, id: newId }];
+                updatedCars = [...(campaign.cars || []), { ...carData, id: newId } as Car];
             }
 
             const updatedCampaign = { ...campaign, cars: updatedCars };

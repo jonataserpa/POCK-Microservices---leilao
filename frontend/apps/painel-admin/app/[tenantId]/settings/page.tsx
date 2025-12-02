@@ -1,6 +1,6 @@
 "use client";
-
-import { useState, useEffect, use } from "react";
+import Image from "next/image";
+import { useState, useEffect, use, useCallback } from "react";
 import { Button, Input, Select, Card } from "@repo/ui-kit";
 
 interface SettingsPageProps {
@@ -9,11 +9,31 @@ interface SettingsPageProps {
     }>;
 }
 
+interface Tenant {
+    id: string;
+    name: string;
+    logoUrl?: string;
+    headerTheme?: {
+        layout?: string;
+        styles?: {
+            backgroundColor?: string;
+            textColor?: string;
+        };
+        title?: {
+            text?: string;
+            color?: string;
+        };
+        logo?: {
+            url?: string;
+        };
+    };
+}
+
 export default function SettingsPage({ params }: SettingsPageProps) {
     const { tenantId } = use(params);
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
-    const [tenant, setTenant] = useState<any>(null);
+    const [tenant, setTenant] = useState<Tenant | null>(null);
 
     // Form state
     const [layout, setLayout] = useState("horizontal-left");
@@ -24,9 +44,9 @@ export default function SettingsPage({ params }: SettingsPageProps) {
 
     useEffect(() => {
         fetchTenant();
-    }, [tenantId]);
+    }, [fetchTenant]);
 
-    const fetchTenant = async () => {
+    const fetchTenant = useCallback(async () => {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
         try {
             const res = await fetch(`${apiUrl}/tenants?id=${tenantId}`);
@@ -49,7 +69,7 @@ export default function SettingsPage({ params }: SettingsPageProps) {
         } finally {
             setLoading(false);
         }
-    };
+    }, [tenantId]);
 
     const handleSave = async () => {
         if (!tenant) return;
@@ -184,7 +204,7 @@ export default function SettingsPage({ params }: SettingsPageProps) {
 
                         {logoUrl && (
                             <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-100 flex justify-center">
-                                <img src={logoUrl} alt="Preview Logo" className="h-16 object-contain" />
+                                <Image src={logoUrl} alt="Preview Logo" width={64} height={64} className="h-16 object-contain" />
                             </div>
                         )}
                     </div>

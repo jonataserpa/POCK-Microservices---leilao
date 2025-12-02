@@ -1,4 +1,4 @@
-import { Card } from "@repo/ui-kit";
+
 
 interface PageProps {
     params: Promise<{
@@ -7,7 +7,7 @@ interface PageProps {
 }
 
 export default async function DashboardPage({ params }: PageProps) {
-    const { tenantId } = await params;
+    await params;
 
     return (
         <div className="space-y-8">

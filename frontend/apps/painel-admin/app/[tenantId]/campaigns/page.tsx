@@ -8,7 +8,7 @@ interface Campaign {
     title: string;
     description: string;
     validUntil: string;
-    cars: any[];
+    cars: unknown[];
 }
 
 async function getCampaigns(tenantId: string): Promise<Campaign[]> {

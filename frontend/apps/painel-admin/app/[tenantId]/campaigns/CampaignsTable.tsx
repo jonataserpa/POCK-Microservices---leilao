@@ -13,7 +13,7 @@ interface Campaign {
     title: string;
     description: string;
     validUntil: string;
-    cars: any[];
+    cars: unknown[];
 }
 
 interface CampaignsTableProps {
@@ -57,7 +57,7 @@ export function CampaignsTable({
         }
     };
 
-    const handleSubmit = async (data: any) => {
+    const handleSubmit = async (data: Partial<Campaign>) => {
         try {
             const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
             if (editingCampaign) {
