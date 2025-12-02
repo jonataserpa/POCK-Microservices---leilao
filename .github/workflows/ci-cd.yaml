@@ -48,8 +48,11 @@ jobs:
       matrix:
         include:
           - context: ./frontend
-            image: frontend
-            dockerfile: ./frontend/Dockerfile
+            image: portal-publico
+            dockerfile: ./frontend/apps/portal-publico/Dockerfile
+          - context: ./frontend
+            image: painel-admin
+            dockerfile: ./frontend/apps/painel-admin/Dockerfile
 
     steps:
       - name: Checkout repository
