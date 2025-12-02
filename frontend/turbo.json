@@ -28,6 +28,12 @@
         "^check-types"
       ]
     },
+    "test": {
+      "dependsOn": [
+        "^test"
+      ],
+      "outputs": []
+    },
     "dev": {
       "cache": false,
       "persistent": true
