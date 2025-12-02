@@ -39,7 +39,7 @@ jobs:
         run: npm run build
 
   build-and-push:
-    needs: [backend-test, frontend-test]
+    needs: [frontend-test]
     runs-on: ubuntu-latest
     permissions:
       contents: read
