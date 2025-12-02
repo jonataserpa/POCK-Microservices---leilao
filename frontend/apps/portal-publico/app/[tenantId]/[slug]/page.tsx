@@ -31,10 +31,19 @@ interface CampaignDetail {
 
 async function getCampaign(tenantId: string, slug: string, lang: string): Promise<CampaignDetail | null> {
     try {
-        const res = await fetch(`http://localhost:3001/campaigns?tenantId=${tenantId}&slug=${slug}&lang=${lang}`, { cache: 'no-store' });
+        // Fetch by tenantId and slug only to handle language fallbacks
+        const res = await fetch(`http://localhost:3001/campaigns?tenantId=${tenantId}&slug=${slug}`, { cache: 'no-store' });
         if (!res.ok) return null;
-        const data = await res.json();
-        return data[0] || null;
+        const campaigns: CampaignDetail[] = await res.json();
+
+        if (campaigns.length === 0) return null;
+
+        // Try to find exact language match
+        const exactMatch = campaigns.find(c => c.lang === lang);
+        if (exactMatch) return exactMatch;
+
+        // Fallback to the first available campaign if exact language match is not found
+        return campaigns[0];
     } catch (error) {
         console.error("Error fetching campaign:", error);
         return null;
@@ -70,69 +79,63 @@ export default async function CampaignPage({ params, searchParams }: PageProps) 
     const t = (key: string) => translations[key] || key;
 
     return (
-        <div className="min-h-screen flex flex-col bg-gray-50">
-            <Header title={campaign.title} />
-
-            <main className="flex-grow">
-                {/* Hero Section */}
-                <div className="relative bg-gray-900 h-96">
-                    <img
-                        src={campaign.heroImage}
-                        alt={campaign.title}
-                        className="w-full h-full object-cover opacity-60"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center px-4 max-w-4xl">
-                            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">
-                                {campaign.title}
-                            </h1>
-                            <p className="text-xl md:text-2xl text-gray-200 mb-8 font-light">
-                                {campaign.description}
-                            </p>
-                            <div className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 text-white">
-                                <span className="mr-2">📅</span>
-                                <span>{t('page.detail.validUntil')}: {new Date(campaign.validUntil).toLocaleDateString(lang)}</span>
-                            </div>
+        <>
+            {/* Hero Section */}
+            <div className="relative bg-gray-900 h-96">
+                <img
+                    src={campaign.heroImage}
+                    alt={campaign.title}
+                    className="w-full h-full object-cover opacity-60"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center px-4 max-w-4xl">
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">
+                            {campaign.title}
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-200 mb-8 font-light">
+                            {campaign.description}
+                        </p>
+                        <div className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 text-white">
+                            <span className="mr-2">📅</span>
+                            <span>{t('page.detail.validUntil')}: {new Date(campaign.validUntil).toLocaleDateString(lang)}</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Content Section */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <div className="flex items-center justify-between mb-10">
-                        <h2 className="text-3xl font-bold text-gray-900">
-                            {t('page.detail.cars.title')}
-                        </h2>
-                        <div className="flex gap-2">
-                            {/* Language Switcher Mock */}
-                            <a href={`?lang=pt-BR`} className={`px-3 py-1 rounded text-sm ${lang === 'pt-BR' ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-700'}`}>PT</a>
-                            <a href={`?lang=en-US`} className={`px-3 py-1 rounded text-sm ${lang === 'en-US' ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-700'}`}>EN</a>
-                            <a href={`?lang=es-ES`} className={`px-3 py-1 rounded text-sm ${lang === 'es-ES' ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-700'}`}>ES</a>
-                        </div>
+            {/* Content Section */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="flex items-center justify-between mb-10">
+                    <h2 className="text-3xl font-bold text-gray-900">
+                        {t('page.detail.cars.title')}
+                    </h2>
+                    <div className="flex gap-2">
+                        {/* Language Switcher Mock */}
+                        <a href={`?lang=pt-BR`} className={`px-3 py-1 rounded text-sm ${lang === 'pt-BR' ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-700'}`}>PT</a>
+                        <a href={`?lang=en-US`} className={`px-3 py-1 rounded text-sm ${lang === 'en-US' ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-700'}`}>EN</a>
+                        <a href={`?lang=es-ES`} className={`px-3 py-1 rounded text-sm ${lang === 'es-ES' ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-700'}`}>ES</a>
                     </div>
-
-                    {campaign.cars.length > 0 ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {campaign.cars.map((car, index) => (
-                                <CarCard
-                                    key={index}
-                                    car={{
-                                        ...car,
-                                        tenantId: campaign.tenantId,
-                                        campaignSlug: campaign.slug
-                                    }}
-                                />
-                            ))}
-                        </div>
-                    ) : (
-                        <div className="text-center py-20 bg-white rounded-xl border border-dashed border-gray-300">
-                            <p className="text-gray-500 text-lg">{t('page.detail.cars.empty')}</p>
-                        </div>
-                    )}
                 </div>
-            </main>
 
-            <Footer copyright="Pock Microservices" />
-        </div>
+                {campaign.cars.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {campaign.cars.map((car, index) => (
+                            <CarCard
+                                key={index}
+                                car={{
+                                    ...car,
+                                    tenantId: campaign.tenantId,
+                                    campaignSlug: campaign.slug
+                                }}
+                            />
+                        ))}
+                    </div>
+                ) : (
+                    <div className="text-center py-20 bg-white rounded-xl border border-dashed border-gray-300">
+                        <p className="text-gray-500 text-lg">{t('page.detail.cars.empty')}</p>
+                    </div>
+                )}
+            </div>
+        </>
     );
 }

@@ -1,1290 +1,1300 @@
 {
-    "campaigns": [
+  "campaigns": [
+    {
+      "id": 1,
+      "tenantId": "acme_motors",
+      "slug": "mega-feirao-suv-2025",
+      "lang": "pt-BR",
+      "title": "Mega Feirão de SUVs 2025",
+      "description": "Taxas especiais, bônus na troca e 1 ano de seguro grátis.",
+      "ctaLabel": "Ver ofertas",
+      "heroImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop&auto=format",
+      "validUntil": "2025-12-31",
+      "cars": [
         {
-            "id": 1,
-            "tenantId": "acme_motors",
-            "slug": "mega-feirao-suv-2025",
-            "lang": "pt-BR",
-            "title": "Mega Feirão de SUVs 2025",
-            "description": "Taxas especiais, bônus na troca e 1 ano de seguro grátis.",
-            "ctaLabel": "Ver ofertas",
-            "heroImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop&auto=format",
-            "validUntil": "2025-12-31",
-            "cars": [
-                {
-                    "model": "ACME Trail 2.0",
-                    "year": 2025,
-                    "priceFrom": 129900,
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 1
-                },
-                {
-                    "model": "ACME Urban 1.6",
-                    "year": 2024,
-                    "priceFrom": 89900,
-                    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 2
-                },
-                {
-                    "model": "ACME Adventure 2.4",
-                    "year": 2025,
-                    "priceFrom": 149900,
-                    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 3
-                },
-                {
-                    "model": "ACME City 1.4",
-                    "year": 2024,
-                    "priceFrom": 79900,
-                    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 4
-                },
-                {
-                    "model": "ACME Premium 3.0",
-                    "year": 2025,
-                    "priceFrom": 189900,
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 5
-                }
-            ]
+          "model": "ACME Trail 2.0",
+          "year": 2025,
+          "priceFrom": 129900,
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 1
         },
         {
-            "id": 2,
-            "tenantId": "acme_motors",
-            "slug": "mega-feirao-suv-2025",
-            "lang": "en-US",
-            "title": "SUV Mega Sale 2025",
-            "description": "Special rates, trade-in bonus and 1 year free insurance.",
-            "ctaLabel": "View deals",
-            "heroImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop&auto=format",
-            "validUntil": "2025-12-31",
-            "cars": [
-                {
-                    "model": "ACME Trail 2.0",
-                    "year": 2025,
-                    "priceFrom": 25980,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 6
-                },
-                {
-                    "model": "ACME Urban 1.6",
-                    "year": 2024,
-                    "priceFrom": 17980,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 7
-                },
-                {
-                    "model": "ACME Adventure 2.4",
-                    "year": 2025,
-                    "priceFrom": 29980,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 8
-                },
-                {
-                    "model": "ACME City 1.4",
-                    "year": 2024,
-                    "priceFrom": 15980,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 9
-                }
-            ]
+          "model": "ACME Urban 1.6",
+          "year": 2024,
+          "priceFrom": 89900,
+          "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 2
         },
         {
-            "id": 3,
-            "tenantId": "acme_motors",
-            "slug": "mega-feirao-suv-2025",
-            "lang": "es-ES",
-            "title": "Gran Feria de SUVs 2025",
-            "description": "Tasas especiales y bono por tu usado.",
-            "ctaLabel": "Ver ofertas",
-            "heroImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop&auto=format",
-            "validUntil": "2025-12-31",
-            "cars": [
-                {
-                    "model": "ACME Trail 2.0",
-                    "year": 2025,
-                    "priceFrom": 25980,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 10
-                },
-                {
-                    "model": "ACME Urban 1.6",
-                    "year": 2024,
-                    "priceFrom": 17980,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 11
-                },
-                {
-                    "model": "ACME Adventure 2.4",
-                    "year": 2025,
-                    "priceFrom": 29980,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 12
-                },
-                {
-                    "model": "ACME City 1.4",
-                    "year": 2024,
-                    "priceFrom": 15980,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 13
-                },
-                {
-                    "model": "ACME Premium 3.0",
-                    "year": 2025,
-                    "priceFrom": 37980,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 14
-                }
-            ]
+          "model": "ACME Adventure 2.4",
+          "year": 2025,
+          "priceFrom": 149900,
+          "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 3
         },
         {
-            "id": 4,
-            "tenantId": "globex_auto",
-            "slug": "electric-future",
-            "lang": "en-US",
-            "title": "Electric Future Event",
-            "description": "Test-drive the latest Globex EV lineup.",
-            "ctaLabel": "Book a test drive",
-            "heroImage": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&h=600&fit=crop",
-            "validUntil": "2025-09-30",
-            "cars": [
-                {
-                    "model": "Globex Volt X",
-                    "year": 2025,
-                    "priceFrom": 39990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop",
-                    "highlight": true,
-                    "id": 15
-                }
-            ]
+          "model": "ACME City 1.4",
+          "year": 2024,
+          "priceFrom": 79900,
+          "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 4
         },
         {
-            "id": 5,
-            "tenantId": "globex_auto",
-            "slug": "electric-future",
-            "lang": "es-ES",
-            "title": "Evento Futuro Eléctrico",
-            "description": "Prueba la nueva línea de vehículos eléctricos Globex.",
-            "ctaLabel": "Agenda tu test drive",
-            "heroImage": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&h=600&fit=crop",
-            "validUntil": "2025-09-30",
-            "cars": [
-                {
-                    "model": "Globex Volt X",
-                    "year": 2025,
-                    "priceFrom": 39990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 16
-                },
-                {
-                    "model": "Globex Eco Plus",
-                    "year": 2024,
-                    "priceFrom": 32990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 17
-                }
-            ]
-        },
-        {
-            "id": 6,
-            "tenantId": "andina_cars",
-            "slug": "andes-special",
-            "lang": "es-ES",
-            "title": "Especial SUV Andes",
-            "description": "Vehículos preparados para cualquier terreno de la cordillera.",
-            "ctaLabel": "Explorar modelos",
-            "heroImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop",
-            "validUntil": "2025-11-30",
-            "cars": [
-                {
-                    "model": "Andina Trek 4x4",
-                    "year": 2024,
-                    "priceFrom": 28990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop",
-                    "highlight": true,
-                    "id": 18
-                }
-            ]
-        },
-        {
-            "id": 7,
-            "tenantId": "andina_cars",
-            "slug": "andes-special",
-            "lang": "pt-BR",
-            "title": "Especial SUV Andes",
-            "description": "SUVs prontos para qualquer terreno na cordilheira.",
-            "ctaLabel": "Ver modelos",
-            "heroImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop",
-            "validUntil": "2025-11-30",
-            "cars": [
-                {
-                    "model": "Andina Trek 4x4",
-                    "year": 2024,
-                    "priceFrom": 28990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 19
-                },
-                {
-                    "model": "Andina Mountain 2.5",
-                    "year": 2024,
-                    "priceFrom": 34990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 20
-                },
-                {
-                    "model": "Andina Explorer 3.0",
-                    "year": 2025,
-                    "priceFrom": 42990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 21
-                }
-            ]
-        },
-        {
-            "id": 8,
-            "tenantId": "andina_cars",
-            "slug": "promocion-verano-2025",
-            "lang": "es-ES",
-            "title": "Promoción Verano 2025",
-            "description": "Aprovecha las mejores ofertas del verano. Financiamiento hasta 60 meses sin interés.",
-            "ctaLabel": "Ver promociones",
-            "heroImage": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=600&fit=crop&auto=format",
-            "validUntil": "2025-03-31",
-            "cars": [
-                {
-                    "model": "Andina City 1.8",
-                    "year": 2024,
-                    "priceFrom": 22990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 22
-                },
-                {
-                    "model": "Andina Sport 2.0",
-                    "year": 2025,
-                    "priceFrom": 31990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 23
-                },
-                {
-                    "model": "Andina Family 1.6",
-                    "year": 2024,
-                    "priceFrom": 19990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 24
-                }
-            ]
-        },
-        {
-            "id": 9,
-            "tenantId": "andina_cars",
-            "slug": "promocion-verano-2025",
-            "lang": "pt-BR",
-            "title": "Promoção Verão 2025",
-            "description": "Aproveite as melhores ofertas do verão. Financiamento até 60 meses sem juros.",
-            "ctaLabel": "Ver promoções",
-            "heroImage": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=600&fit=crop&auto=format",
-            "validUntil": "2025-03-31",
-            "cars": [
-                {
-                    "model": "Andina City 1.8",
-                    "year": 2024,
-                    "priceFrom": 22990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 25
-                },
-                {
-                    "model": "Andina Sport 2.0",
-                    "year": 2025,
-                    "priceFrom": 31990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 26
-                },
-                {
-                    "model": "Andina Family 1.6",
-                    "year": 2024,
-                    "priceFrom": 19990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 27
-                }
-            ]
-        },
-        {
-            "id": 10,
-            "tenantId": "andina_cars",
-            "slug": "financiamiento-especial",
-            "lang": "es-ES",
-            "title": "Financiamiento Especial Andes",
-            "description": "Crédito pre-aprobado en 24 horas. Primera cuota en 90 días.",
-            "ctaLabel": "Solicitar crédito",
-            "heroImage": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&h=600&fit=crop&auto=format",
-            "validUntil": "2025-06-30",
-            "cars": [
-                {
-                    "model": "Andina Premium 3.0",
-                    "year": 2025,
-                    "priceFrom": 45990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 28
-                },
-                {
-                    "model": "Andina Trek 4x4",
-                    "year": 2024,
-                    "priceFrom": 28990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 29
-                }
-            ]
-        },
-        {
-            "id": 11,
-            "tenantId": "andina_cars",
-            "slug": "financiamento-especial",
-            "lang": "pt-BR",
-            "title": "Financiamento Especial Andes",
-            "description": "Crédito pré-aprovado em 24 horas. Primeira parcela em 90 dias.",
-            "ctaLabel": "Solicitar crédito",
-            "heroImage": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&h=600&fit=crop&auto=format",
-            "validUntil": "2025-06-30",
-            "cars": [
-                {
-                    "model": "Andina Premium 3.0",
-                    "year": 2025,
-                    "priceFrom": 45990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 30
-                },
-                {
-                    "model": "Andina Trek 4x4",
-                    "year": 2024,
-                    "priceFrom": 28990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 31
-                }
-            ]
-        },
-        {
-            "id": 12,
-            "tenantId": "andina_cars",
-            "slug": "lanzamiento-2025",
-            "lang": "es-ES",
-            "title": "Lanzamiento Modelos 2025",
-            "description": "Descubre los nuevos modelos Andina 2025. Tecnología de punta y diseño innovador.",
-            "ctaLabel": "Conocer modelos",
-            "heroImage": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&h=600&fit=crop&auto=format",
-            "validUntil": "2025-12-31",
-            "cars": [
-                {
-                    "model": "Andina Future EV",
-                    "year": 2025,
-                    "priceFrom": 54990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 32
-                },
-                {
-                    "model": "Andina Hybrid Pro",
-                    "year": 2025,
-                    "priceFrom": 38990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 33
-                },
-                {
-                    "model": "Andina Sport 2.0",
-                    "year": 2025,
-                    "priceFrom": 31990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 34
-                }
-            ]
-        },
-        {
-            "id": 13,
-            "tenantId": "andina_cars",
-            "slug": "lancamento-2025",
-            "lang": "pt-BR",
-            "title": "Lançamento Modelos 2025",
-            "description": "Descubra os novos modelos Andina 2025. Tecnologia de ponta e design inovador.",
-            "ctaLabel": "Conhecer modelos",
-            "heroImage": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&h=600&fit=crop&auto=format",
-            "validUntil": "2025-12-31",
-            "cars": [
-                {
-                    "model": "Andina Future EV",
-                    "year": 2025,
-                    "priceFrom": 54990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 35
-                },
-                {
-                    "model": "Andina Hybrid Pro",
-                    "year": 2025,
-                    "priceFrom": 38990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
-                    "highlight": true,
-                    "id": 36
-                },
-                {
-                    "model": "Andina Sport 2.0",
-                    "year": 2025,
-                    "priceFrom": 31990,
-                    "currency": "USD",
-                    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
-                    "highlight": false,
-                    "id": 37
-                }
-            ]
+          "model": "ACME Premium 3.0",
+          "year": 2025,
+          "priceFrom": 189900,
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 5
         }
-    ],
-    "translations": [
-        {
-            "id": 1,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "campaign.title",
-            "value": "Encontre o carro perfeito para você"
-        },
-        {
-            "id": 2,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "campaign.subtitle",
-            "value": "Ofertas exclusivas ACME Motors"
-        },
-        {
-            "id": 3,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "campaign.title",
-            "value": "Find your perfect car"
-        },
-        {
-            "id": 4,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "campaign.subtitle",
-            "value": "Exclusive ACME Motors deals"
-        },
-        {
-            "id": 5,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "campaign.title",
-            "value": "Encuentra tu coche perfecto"
-        },
-        {
-            "id": 6,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "campaign.subtitle",
-            "value": "Ofertas exclusivas ACME Motors"
-        },
-        {
-            "id": 7,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "campaign.title",
-            "value": "Drive the future with Globex"
-        },
-        {
-            "id": 8,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "campaign.subtitle",
-            "value": "Premium cars, global experience"
-        },
-        {
-            "id": 9,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "campaign.title",
-            "value": "Conduce el futuro con Globex"
-        },
-        {
-            "id": 10,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "campaign.subtitle",
-            "value": "Autos premium, experiencia global"
-        },
-        {
-            "id": 11,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "campaign.title",
-            "value": "Tu próximo auto te espera en Andina"
-        },
-        {
-            "id": 12,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "campaign.subtitle",
-            "value": "Financiamiento flexible para toda la región"
-        },
-        {
-            "id": 13,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "campaign.title",
-            "value": "Seu próximo carro está na Andina"
-        },
-        {
-            "id": 14,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "campaign.subtitle",
-            "value": "Financiamento flexível para toda a região"
-        },
-        {
-            "id": 15,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "page.campaigns.title",
-            "value": "Campanhas Disponíveis"
-        },
-        {
-            "id": 16,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "page.campaigns.strategy",
-            "value": "Estratégia: ISR (revalida a cada 60s) - Detecção de tenant por domínio"
-        },
-        {
-            "id": 17,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "page.campaigns.empty",
-            "value": "Nenhuma campanha disponível no momento."
-        },
-        {
-            "id": 18,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "page.detail.cars.title",
-            "value": "Carros Disponíveis"
-        },
-        {
-            "id": 19,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "page.detail.cars.empty",
-            "value": "Nenhum carro disponível nesta campanha no momento."
-        },
-        {
-            "id": 20,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "page.detail.validUntil",
-            "value": "Válido até"
-        },
-        {
-            "id": 21,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "car.highlight",
-            "value": "DESTAQUE"
-        },
-        {
-            "id": 22,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "car.year",
-            "value": "Ano"
-        },
-        {
-            "id": 23,
-            "tenantId": "acme_motors",
-            "lang": "pt-BR",
-            "key": "car.priceFrom",
-            "value": "A partir de"
-        },
-        {
-            "id": 24,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "page.campaigns.title",
-            "value": "Available Campaigns"
-        },
-        {
-            "id": 25,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "page.campaigns.strategy",
-            "value": "Strategy: ISR (revalidates every 60s) - Tenant detection by domain"
-        },
-        {
-            "id": 26,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "page.campaigns.empty",
-            "value": "No campaigns available at the moment."
-        },
-        {
-            "id": 27,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "page.detail.cars.title",
-            "value": "Available Cars"
-        },
-        {
-            "id": 28,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "page.detail.cars.empty",
-            "value": "No cars available in this campaign at the moment."
-        },
-        {
-            "id": 29,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "page.detail.validUntil",
-            "value": "Valid until"
-        },
-        {
-            "id": 30,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "car.highlight",
-            "value": "FEATURED"
-        },
-        {
-            "id": 31,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "car.year",
-            "value": "Year"
-        },
-        {
-            "id": 32,
-            "tenantId": "acme_motors",
-            "lang": "en-US",
-            "key": "car.priceFrom",
-            "value": "From"
-        },
-        {
-            "id": 33,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "page.campaigns.title",
-            "value": "Campañas Disponibles"
-        },
-        {
-            "id": 34,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "page.campaigns.strategy",
-            "value": "Estrategia: ISR (revalida cada 60s) - Detección de tenant por dominio"
-        },
-        {
-            "id": 35,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "page.campaigns.empty",
-            "value": "No hay campañas disponibles en este momento."
-        },
-        {
-            "id": 36,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "page.detail.cars.title",
-            "value": "Coches Disponibles"
-        },
-        {
-            "id": 37,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "page.detail.cars.empty",
-            "value": "No hay coches disponibles en esta campaña en este momento."
-        },
-        {
-            "id": 38,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "page.detail.validUntil",
-            "value": "Válido hasta"
-        },
-        {
-            "id": 39,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "car.highlight",
-            "value": "DESTACADO"
-        },
-        {
-            "id": 40,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "car.year",
-            "value": "Año"
-        },
-        {
-            "id": 41,
-            "tenantId": "acme_motors",
-            "lang": "es-ES",
-            "key": "car.priceFrom",
-            "value": "Desde"
-        },
-        {
-            "id": 42,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "page.campaigns.title",
-            "value": "Available Campaigns"
-        },
-        {
-            "id": 43,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "page.campaigns.strategy",
-            "value": "Strategy: ISR (revalidates every 60s) - Tenant detection by domain"
-        },
-        {
-            "id": 44,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "page.campaigns.empty",
-            "value": "No campaigns available at the moment."
-        },
-        {
-            "id": 45,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "page.detail.cars.title",
-            "value": "Available Cars"
-        },
-        {
-            "id": 46,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "page.detail.cars.empty",
-            "value": "No cars available in this campaign at the moment."
-        },
-        {
-            "id": 47,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "page.detail.validUntil",
-            "value": "Valid until"
-        },
-        {
-            "id": 48,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "car.highlight",
-            "value": "FEATURED"
-        },
-        {
-            "id": 49,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "car.year",
-            "value": "Year"
-        },
-        {
-            "id": 50,
-            "tenantId": "globex_auto",
-            "lang": "en-US",
-            "key": "car.priceFrom",
-            "value": "From"
-        },
-        {
-            "id": 51,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "page.campaigns.title",
-            "value": "Campañas Disponibles"
-        },
-        {
-            "id": 52,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "page.campaigns.strategy",
-            "value": "Estrategia: ISR (revalida cada 60s) - Detección de tenant por dominio"
-        },
-        {
-            "id": 53,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "page.campaigns.empty",
-            "value": "No hay campañas disponibles en este momento."
-        },
-        {
-            "id": 54,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "page.detail.cars.title",
-            "value": "Coches Disponibles"
-        },
-        {
-            "id": 55,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "page.detail.cars.empty",
-            "value": "No hay coches disponibles en esta campaña en este momento."
-        },
-        {
-            "id": 56,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "page.detail.validUntil",
-            "value": "Válido hasta"
-        },
-        {
-            "id": 57,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "car.highlight",
-            "value": "DESTACADO"
-        },
-        {
-            "id": 58,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "car.year",
-            "value": "Año"
-        },
-        {
-            "id": 59,
-            "tenantId": "globex_auto",
-            "lang": "es-ES",
-            "key": "car.priceFrom",
-            "value": "Desde"
-        },
-        {
-            "id": 60,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "page.campaigns.title",
-            "value": "Campañas Disponibles"
-        },
-        {
-            "id": 61,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "page.campaigns.strategy",
-            "value": "Estrategia: ISR (revalida cada 60s) - Detección de tenant por dominio"
-        },
-        {
-            "id": 62,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "page.campaigns.empty",
-            "value": "No hay campañas disponibles en este momento."
-        },
-        {
-            "id": 63,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "page.detail.cars.title",
-            "value": "Coches Disponibles"
-        },
-        {
-            "id": 64,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "page.detail.cars.empty",
-            "value": "No hay coches disponibles en esta campaña en este momento."
-        },
-        {
-            "id": 65,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "page.detail.validUntil",
-            "value": "Válido hasta"
-        },
-        {
-            "id": 66,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "car.highlight",
-            "value": "DESTACADO"
-        },
-        {
-            "id": 67,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "car.year",
-            "value": "Año"
-        },
-        {
-            "id": 68,
-            "tenantId": "andina_cars",
-            "lang": "es-ES",
-            "key": "car.priceFrom",
-            "value": "Desde"
-        },
-        {
-            "id": 69,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "page.campaigns.title",
-            "value": "Campanhas Disponíveis"
-        },
-        {
-            "id": 70,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "page.campaigns.strategy",
-            "value": "Estratégia: ISR (revalida a cada 60s) - Detecção de tenant por domínio"
-        },
-        {
-            "id": 71,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "page.campaigns.empty",
-            "value": "Nenhuma campanha disponível no momento."
-        },
-        {
-            "id": 72,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "page.detail.cars.title",
-            "value": "Carros Disponíveis"
-        },
-        {
-            "id": 73,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "page.detail.cars.empty",
-            "value": "Nenhum carro disponível nesta campanha no momento."
-        },
-        {
-            "id": 74,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "page.detail.validUntil",
-            "value": "Válido até"
-        },
-        {
-            "id": 75,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "car.highlight",
-            "value": "DESTAQUE"
-        },
-        {
-            "id": 76,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "car.year",
-            "value": "Ano"
-        },
-        {
-            "id": 77,
-            "tenantId": "andina_cars",
-            "lang": "pt-BR",
-            "key": "car.priceFrom",
-            "value": "A partir de"
+      ]
+    },
+    {
+      "id": 2,
+      "tenantId": "acme_motors",
+      "slug": "mega-feirao-suv-2025",
+      "lang": "en-US",
+      "title": "SUV Mega Sale 2025",
+      "description": "Special rates, trade-in bonus and 1 year free insurance.",
+      "ctaLabel": "View deals",
+      "heroImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop&auto=format",
+      "validUntil": "2025-12-31",
+      "cars": [
+        {
+          "model": "ACME Trail 2.0",
+          "year": 2025,
+          "priceFrom": 25980,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 6
+        },
+        {
+          "model": "ACME Urban 1.6",
+          "year": 2024,
+          "priceFrom": 17980,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 7
+        },
+        {
+          "model": "ACME Adventure 2.4",
+          "year": 2025,
+          "priceFrom": 29980,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 8
+        },
+        {
+          "model": "ACME City 1.4",
+          "year": 2024,
+          "priceFrom": 15980,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 9
         }
-    ],
-    "tenants": [
+      ]
+    },
+    {
+      "id": 3,
+      "tenantId": "acme_motors",
+      "slug": "mega-feirao-suv-2025",
+      "lang": "es-ES",
+      "title": "Gran Feria de SUVs 2025",
+      "description": "Tasas especiales y bono por tu usado.",
+      "ctaLabel": "Ver ofertas",
+      "heroImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop&auto=format",
+      "validUntil": "2025-12-31",
+      "cars": [
         {
-            "id": "acme_motors",
-            "name": "ACME Motors",
-            "domain": "acme.localhost",
-            "defaultLang": "pt-BR",
-            "supportedLangs": [
-                "pt-BR",
-                "en-US",
-                "es-ES"
-            ],
-            "theme": {
-                "primary": "#2563eb",
-                "secondary": "#1d4ed8"
+          "model": "ACME Trail 2.0",
+          "year": 2025,
+          "priceFrom": 25980,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 10
+        },
+        {
+          "model": "ACME Urban 1.6",
+          "year": 2024,
+          "priceFrom": 17980,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 11
+        },
+        {
+          "model": "ACME Adventure 2.4",
+          "year": 2025,
+          "priceFrom": 29980,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 12
+        },
+        {
+          "model": "ACME City 1.4",
+          "year": 2024,
+          "priceFrom": 15980,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 13
+        },
+        {
+          "model": "ACME Premium 3.0",
+          "year": 2025,
+          "priceFrom": 37980,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 14
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "tenantId": "globex_auto",
+      "slug": "electric-future",
+      "lang": "en-US",
+      "title": "Electric Future Event",
+      "description": "Test-drive the latest Globex EV lineup.",
+      "ctaLabel": "Book a test drive",
+      "heroImage": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&h=600&fit=crop",
+      "validUntil": "2025-09-30",
+      "cars": [
+        {
+          "model": "Globex Volt X",
+          "year": 2025,
+          "priceFrom": 39990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop",
+          "highlight": true,
+          "id": 15
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "tenantId": "globex_auto",
+      "slug": "electric-future",
+      "lang": "es-ES",
+      "title": "Evento Futuro Eléctrico",
+      "description": "Prueba la nueva línea de vehículos eléctricos Globex.",
+      "ctaLabel": "Agenda tu test drive",
+      "heroImage": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&h=600&fit=crop",
+      "validUntil": "2025-09-30",
+      "cars": [
+        {
+          "model": "Globex Volt X",
+          "year": 2025,
+          "priceFrom": 39990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 16
+        },
+        {
+          "model": "Globex Eco Plus",
+          "year": 2024,
+          "priceFrom": 32990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 17
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "tenantId": "andina_cars",
+      "slug": "andes-special",
+      "lang": "es-ES",
+      "title": "Especial SUV Andes",
+      "description": "Vehículos preparados para cualquier terreno de la cordillera.",
+      "ctaLabel": "Explorar modelos",
+      "heroImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop",
+      "validUntil": "2025-11-30",
+      "cars": [
+        {
+          "model": "Andina Trek 4x4",
+          "year": 2024,
+          "priceFrom": 28990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop",
+          "highlight": true,
+          "id": 18
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "tenantId": "andina_cars",
+      "slug": "andes-special",
+      "lang": "pt-BR",
+      "title": "Especial SUV Andes",
+      "description": "SUVs prontos para qualquer terreno na cordilheira.",
+      "ctaLabel": "Ver modelos",
+      "heroImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&h=600&fit=crop",
+      "validUntil": "2025-11-30",
+      "cars": [
+        {
+          "model": "Andina Trek 4x4",
+          "year": 2024,
+          "priceFrom": 28990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 19
+        },
+        {
+          "model": "Andina Mountain 2.5",
+          "year": 2024,
+          "priceFrom": 34990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 20
+        },
+        {
+          "model": "Andina Explorer 3.0",
+          "year": 2025,
+          "priceFrom": 42990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 21
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "tenantId": "andina_cars",
+      "slug": "promocion-verano-2025",
+      "lang": "es-ES",
+      "title": "Promoción Verano 2025",
+      "description": "Aprovecha las mejores ofertas del verano. Financiamiento hasta 60 meses sin interés.",
+      "ctaLabel": "Ver promociones",
+      "heroImage": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=600&fit=crop&auto=format",
+      "validUntil": "2025-03-31",
+      "cars": [
+        {
+          "model": "Andina City 1.8",
+          "year": 2024,
+          "priceFrom": 22990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 22
+        },
+        {
+          "model": "Andina Sport 2.0",
+          "year": 2025,
+          "priceFrom": 31990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 23
+        },
+        {
+          "model": "Andina Family 1.6",
+          "year": 2024,
+          "priceFrom": 19990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 24
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "tenantId": "andina_cars",
+      "slug": "promocion-verano-2025",
+      "lang": "pt-BR",
+      "title": "Promoção Verão 2025",
+      "description": "Aproveite as melhores ofertas do verão. Financiamento até 60 meses sem juros.",
+      "ctaLabel": "Ver promoções",
+      "heroImage": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=600&fit=crop&auto=format",
+      "validUntil": "2025-03-31",
+      "cars": [
+        {
+          "model": "Andina City 1.8",
+          "year": 2024,
+          "priceFrom": 22990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 25
+        },
+        {
+          "model": "Andina Sport 2.0",
+          "year": 2025,
+          "priceFrom": 31990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 26
+        },
+        {
+          "model": "Andina Family 1.6",
+          "year": 2024,
+          "priceFrom": 19990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 27
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "tenantId": "andina_cars",
+      "slug": "financiamiento-especial",
+      "lang": "es-ES",
+      "title": "Financiamiento Especial Andes",
+      "description": "Crédito pre-aprobado en 24 horas. Primera cuota en 90 días.",
+      "ctaLabel": "Solicitar crédito",
+      "heroImage": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&h=600&fit=crop&auto=format",
+      "validUntil": "2025-06-30",
+      "cars": [
+        {
+          "model": "Andina Premium 3.0",
+          "year": 2025,
+          "priceFrom": 45990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 28
+        },
+        {
+          "model": "Andina Trek 4x4",
+          "year": 2024,
+          "priceFrom": 28990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 29
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "tenantId": "andina_cars",
+      "slug": "financiamento-especial",
+      "lang": "pt-BR",
+      "title": "Financiamento Especial Andes",
+      "description": "Crédito pré-aprovado em 24 horas. Primeira parcela em 90 dias.",
+      "ctaLabel": "Solicitar crédito",
+      "heroImage": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&h=600&fit=crop&auto=format",
+      "validUntil": "2025-06-30",
+      "cars": [
+        {
+          "model": "Andina Premium 3.0",
+          "year": 2025,
+          "priceFrom": 45990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 30
+        },
+        {
+          "model": "Andina Trek 4x4",
+          "year": 2024,
+          "priceFrom": 28990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 31
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "tenantId": "andina_cars",
+      "slug": "lanzamiento-2025",
+      "lang": "es-ES",
+      "title": "Lanzamiento Modelos 2025",
+      "description": "Descubre los nuevos modelos Andina 2025. Tecnología de punta y diseño innovador.",
+      "ctaLabel": "Conocer modelos",
+      "heroImage": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&h=600&fit=crop&auto=format",
+      "validUntil": "2025-12-31",
+      "cars": [
+        {
+          "model": "Andina Future EV",
+          "year": 2025,
+          "priceFrom": 54990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 32
+        },
+        {
+          "model": "Andina Hybrid Pro",
+          "year": 2025,
+          "priceFrom": 38990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 33
+        },
+        {
+          "model": "Andina Sport 2.0",
+          "year": 2025,
+          "priceFrom": 31990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 34
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "tenantId": "andina_cars",
+      "slug": "lancamento-2025",
+      "lang": "pt-BR",
+      "title": "Lançamento Modelos 2025",
+      "description": "Descubra os novos modelos Andina 2025. Tecnologia de ponta e design inovador.",
+      "ctaLabel": "Conhecer modelos",
+      "heroImage": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&h=600&fit=crop&auto=format",
+      "validUntil": "2025-12-31",
+      "cars": [
+        {
+          "model": "Andina Future EV",
+          "year": 2025,
+          "priceFrom": 54990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 35
+        },
+        {
+          "model": "Andina Hybrid Pro",
+          "year": 2025,
+          "priceFrom": 38990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=600&fit=crop&auto=format",
+          "highlight": true,
+          "id": 36
+        },
+        {
+          "model": "Andina Sport 2.0",
+          "year": 2025,
+          "priceFrom": 31990,
+          "currency": "USD",
+          "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&auto=format",
+          "highlight": false,
+          "id": 37
+        }
+      ]
+    },
+    {
+      "tenantId": "acme_motors",
+      "slug": "teste",
+      "lang": "pt-BR",
+      "title": "Teste de campanha",
+      "description": "Testeeeeee campanha WWWWWW",
+      "validUntil": "2025-12-02",
+      "cars": [],
+      "id": 14
+    }
+  ],
+  "translations": [
+    {
+      "id": 1,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "campaign.title",
+      "value": "Encontre o carro perfeito para você"
+    },
+    {
+      "id": 2,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "campaign.subtitle",
+      "value": "Ofertas exclusivas ACME Motors"
+    },
+    {
+      "id": 3,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "campaign.title",
+      "value": "Find your perfect car"
+    },
+    {
+      "id": 4,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "campaign.subtitle",
+      "value": "Exclusive ACME Motors deals"
+    },
+    {
+      "id": 5,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "campaign.title",
+      "value": "Encuentra tu coche perfecto"
+    },
+    {
+      "id": 6,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "campaign.subtitle",
+      "value": "Ofertas exclusivas ACME Motors"
+    },
+    {
+      "id": 7,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "campaign.title",
+      "value": "Drive the future with Globex"
+    },
+    {
+      "id": 8,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "campaign.subtitle",
+      "value": "Premium cars, global experience"
+    },
+    {
+      "id": 9,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "campaign.title",
+      "value": "Conduce el futuro con Globex"
+    },
+    {
+      "id": 10,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "campaign.subtitle",
+      "value": "Autos premium, experiencia global"
+    },
+    {
+      "id": 11,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "campaign.title",
+      "value": "Tu próximo auto te espera en Andina"
+    },
+    {
+      "id": 12,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "campaign.subtitle",
+      "value": "Financiamiento flexible para toda la región"
+    },
+    {
+      "id": 13,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "campaign.title",
+      "value": "Seu próximo carro está na Andina"
+    },
+    {
+      "id": 14,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "campaign.subtitle",
+      "value": "Financiamento flexível para toda a região"
+    },
+    {
+      "id": 15,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "page.campaigns.title",
+      "value": "Campanhas Disponíveis"
+    },
+    {
+      "id": 16,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "page.campaigns.strategy",
+      "value": "Estratégia: ISR (revalida a cada 60s) - Detecção de tenant por domínio"
+    },
+    {
+      "id": 17,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "page.campaigns.empty",
+      "value": "Nenhuma campanha disponível no momento."
+    },
+    {
+      "id": 18,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "page.detail.cars.title",
+      "value": "Carros Disponíveis"
+    },
+    {
+      "id": 19,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "page.detail.cars.empty",
+      "value": "Nenhum carro disponível nesta campanha no momento."
+    },
+    {
+      "id": 20,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "page.detail.validUntil",
+      "value": "Válido até"
+    },
+    {
+      "id": 21,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "car.highlight",
+      "value": "DESTAQUE"
+    },
+    {
+      "id": 22,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "car.year",
+      "value": "Ano"
+    },
+    {
+      "id": 23,
+      "tenantId": "acme_motors",
+      "lang": "pt-BR",
+      "key": "car.priceFrom",
+      "value": "A partir de"
+    },
+    {
+      "id": 24,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "page.campaigns.title",
+      "value": "Available Campaigns"
+    },
+    {
+      "id": 25,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "page.campaigns.strategy",
+      "value": "Strategy: ISR (revalidates every 60s) - Tenant detection by domain"
+    },
+    {
+      "id": 26,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "page.campaigns.empty",
+      "value": "No campaigns available at the moment."
+    },
+    {
+      "id": 27,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "page.detail.cars.title",
+      "value": "Available Cars"
+    },
+    {
+      "id": 28,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "page.detail.cars.empty",
+      "value": "No cars available in this campaign at the moment."
+    },
+    {
+      "id": 29,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "page.detail.validUntil",
+      "value": "Valid until"
+    },
+    {
+      "id": 30,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "car.highlight",
+      "value": "FEATURED"
+    },
+    {
+      "id": 31,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "car.year",
+      "value": "Year"
+    },
+    {
+      "id": 32,
+      "tenantId": "acme_motors",
+      "lang": "en-US",
+      "key": "car.priceFrom",
+      "value": "From"
+    },
+    {
+      "id": 33,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "page.campaigns.title",
+      "value": "Campañas Disponibles"
+    },
+    {
+      "id": 34,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "page.campaigns.strategy",
+      "value": "Estrategia: ISR (revalida cada 60s) - Detección de tenant por dominio"
+    },
+    {
+      "id": 35,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "page.campaigns.empty",
+      "value": "No hay campañas disponibles en este momento."
+    },
+    {
+      "id": 36,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "page.detail.cars.title",
+      "value": "Coches Disponibles"
+    },
+    {
+      "id": 37,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "page.detail.cars.empty",
+      "value": "No hay coches disponibles en esta campaña en este momento."
+    },
+    {
+      "id": 38,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "page.detail.validUntil",
+      "value": "Válido hasta"
+    },
+    {
+      "id": 39,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "car.highlight",
+      "value": "DESTACADO"
+    },
+    {
+      "id": 40,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "car.year",
+      "value": "Año"
+    },
+    {
+      "id": 41,
+      "tenantId": "acme_motors",
+      "lang": "es-ES",
+      "key": "car.priceFrom",
+      "value": "Desde"
+    },
+    {
+      "id": 42,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "page.campaigns.title",
+      "value": "Available Campaigns"
+    },
+    {
+      "id": 43,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "page.campaigns.strategy",
+      "value": "Strategy: ISR (revalidates every 60s) - Tenant detection by domain"
+    },
+    {
+      "id": 44,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "page.campaigns.empty",
+      "value": "No campaigns available at the moment."
+    },
+    {
+      "id": 45,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "page.detail.cars.title",
+      "value": "Available Cars"
+    },
+    {
+      "id": 46,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "page.detail.cars.empty",
+      "value": "No cars available in this campaign at the moment."
+    },
+    {
+      "id": 47,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "page.detail.validUntil",
+      "value": "Valid until"
+    },
+    {
+      "id": 48,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "car.highlight",
+      "value": "FEATURED"
+    },
+    {
+      "id": 49,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "car.year",
+      "value": "Year"
+    },
+    {
+      "id": 50,
+      "tenantId": "globex_auto",
+      "lang": "en-US",
+      "key": "car.priceFrom",
+      "value": "From"
+    },
+    {
+      "id": 51,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "page.campaigns.title",
+      "value": "Campañas Disponibles"
+    },
+    {
+      "id": 52,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "page.campaigns.strategy",
+      "value": "Estrategia: ISR (revalida cada 60s) - Detección de tenant por dominio"
+    },
+    {
+      "id": 53,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "page.campaigns.empty",
+      "value": "No hay campañas disponibles en este momento."
+    },
+    {
+      "id": 54,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "page.detail.cars.title",
+      "value": "Coches Disponibles"
+    },
+    {
+      "id": 55,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "page.detail.cars.empty",
+      "value": "No hay coches disponibles en esta campaña en este momento."
+    },
+    {
+      "id": 56,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "page.detail.validUntil",
+      "value": "Válido hasta"
+    },
+    {
+      "id": 57,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "car.highlight",
+      "value": "DESTACADO"
+    },
+    {
+      "id": 58,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "car.year",
+      "value": "Año"
+    },
+    {
+      "id": 59,
+      "tenantId": "globex_auto",
+      "lang": "es-ES",
+      "key": "car.priceFrom",
+      "value": "Desde"
+    },
+    {
+      "id": 60,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "page.campaigns.title",
+      "value": "Campañas Disponibles"
+    },
+    {
+      "id": 61,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "page.campaigns.strategy",
+      "value": "Estrategia: ISR (revalida cada 60s) - Detección de tenant por dominio"
+    },
+    {
+      "id": 62,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "page.campaigns.empty",
+      "value": "No hay campañas disponibles en este momento."
+    },
+    {
+      "id": 63,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "page.detail.cars.title",
+      "value": "Coches Disponibles"
+    },
+    {
+      "id": 64,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "page.detail.cars.empty",
+      "value": "No hay coches disponibles en esta campaña en este momento."
+    },
+    {
+      "id": 65,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "page.detail.validUntil",
+      "value": "Válido hasta"
+    },
+    {
+      "id": 66,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "car.highlight",
+      "value": "DESTACADO"
+    },
+    {
+      "id": 67,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "car.year",
+      "value": "Año"
+    },
+    {
+      "id": 68,
+      "tenantId": "andina_cars",
+      "lang": "es-ES",
+      "key": "car.priceFrom",
+      "value": "Desde"
+    },
+    {
+      "id": 69,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "page.campaigns.title",
+      "value": "Campanhas Disponíveis"
+    },
+    {
+      "id": 70,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "page.campaigns.strategy",
+      "value": "Estratégia: ISR (revalida a cada 60s) - Detecção de tenant por domínio"
+    },
+    {
+      "id": 71,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "page.campaigns.empty",
+      "value": "Nenhuma campanha disponível no momento."
+    },
+    {
+      "id": 72,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "page.detail.cars.title",
+      "value": "Carros Disponíveis"
+    },
+    {
+      "id": 73,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "page.detail.cars.empty",
+      "value": "Nenhum carro disponível nesta campanha no momento."
+    },
+    {
+      "id": 74,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "page.detail.validUntil",
+      "value": "Válido até"
+    },
+    {
+      "id": 75,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "car.highlight",
+      "value": "DESTAQUE"
+    },
+    {
+      "id": 76,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "car.year",
+      "value": "Ano"
+    },
+    {
+      "id": 77,
+      "tenantId": "andina_cars",
+      "lang": "pt-BR",
+      "key": "car.priceFrom",
+      "value": "A partir de"
+    }
+  ],
+  "tenants": [
+    {
+      "id": "acme_motors",
+      "name": "ACME Motors",
+      "domain": "acme.localhost",
+      "defaultLang": "pt-BR",
+      "supportedLangs": [
+        "pt-BR",
+        "en-US",
+        "es-ES"
+      ],
+      "theme": {
+        "primary": "#2563eb",
+        "secondary": "#1d4ed8"
+      },
+      "logoUrl": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=200&h=80&fit=crop&q=80",
+      "country": "BR",
+      "headerTheme": {
+        "layout": "horizontal-left",
+        "logo": {
+          "url": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=200&h=80&fit=crop&q=80",
+          "position": "left",
+          "width": 32,
+          "height": 32,
+          "alt": "Logo Portal"
+        },
+        "title": {
+          "text": "Portal Público",
+          "position": "left",
+          "fontSize": "1.125rem",
+          "fontWeight": "600",
+          "color": "#0a0a0a"
+        },
+        "menu": {
+          "items": [
+            {
+              "label": "Leilões Ativos",
+              "href": "leiloes",
+              "target": "_self"
             },
-            "logoUrl": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=200&h=80&fit=crop&q=80",
-            "country": "BR",
-            "headerTheme": {
-                "layout": "horizontal-left",
-                "logo": {
-                    "url": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=200&h=80&fit=crop&q=80",
-                    "position": "left",
-                    "width": 200,
-                    "height": 80,
-                    "alt": "Logo ACME Motors"
-                },
-                "title": {
-                    "text": "ACME Motors",
-                    "position": "left",
-                    "fontSize": "1.5rem",
-                    "fontWeight": "bold",
-                    "color": "white"
-                },
-                "menu": {
-                    "items": [
-                        {
-                            "label": "Campanhas",
-                            "href": "/anuncios",
-                            "target": "_self"
-                        },
-                        {
-                            "label": "Catálogo",
-                            "href": "/catalogo/acme_motors",
-                            "target": "_self"
-                        },
-                        {
-                            "label": "Preços",
-                            "href": "/precos/ofertas",
-                            "target": "_self"
-                        }
-                    ],
-                    "position": "center"
-                },
-                "info": {
-                    "showCountry": true,
-                    "showLanguages": true,
-                    "position": "right",
-                    "separator": " • "
-                },
-                "styles": {
-                    "backgroundColor": "#2563eb",
-                    "textColor": "white",
-                    "padding": "1rem 2rem",
-                    "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
-                }
-            }
-        },
-        {
-            "id": "globex_auto",
-            "name": "Globex Auto",
-            "domain": "globex.localhost",
-            "defaultLang": "en-US",
-            "supportedLangs": [
-                "en-US",
-                "es-ES"
-            ],
-            "theme": {
-                "primary": "#22c55e",
-                "secondary": "#15803d"
+            {
+              "label": "Vender",
+              "href": "vender",
+              "target": "_self"
             },
-            "logoUrl": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=200&h=80&fit=crop&q=80",
-            "country": "US",
-            "headerTheme": {
-                "layout": "vertical-stacked",
-                "logo": {
-                    "url": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=200&h=80&fit=crop&q=80",
-                    "position": "top",
-                    "width": 220,
-                    "height": 90,
-                    "alt": "Logo Globex Auto"
-                },
-                "title": {
-                    "text": "GLOBEX AUTO",
-                    "position": "below-logo",
-                    "fontSize": "2.25rem",
-                    "fontWeight": "800",
-                    "color": "white"
-                },
-                "menu": {
-                    "items": [
-                        {
-                            "label": "Campaigns",
-                            "href": "/anuncios",
-                            "target": "_self"
-                        },
-                        {
-                            "label": "Catalog",
-                            "href": "/catalogo/globex_auto",
-                            "target": "_self"
-                        }
-                    ],
-                    "position": "center"
-                },
-                "info": {
-                    "showCountry": true,
-                    "showLanguages": true,
-                    "position": "center",
-                    "separator": " | "
-                },
-                "styles": {
-                    "backgroundColor": "#22c55e",
-                    "textColor": "white",
-                    "padding": "2rem 2rem 1.5rem 2rem",
-                    "boxShadow": "0 4px 6px rgba(0,0,0,0.15)",
-                    "borderRadius": "0 0 16px 16px"
-                },
-                "additionalContent": [
-                    {
-                        "type": "text",
-                        "content": "Premium Quality",
-                        "position": "right"
-                    }
-                ]
+            {
+              "label": "Sobre",
+              "href": "sobre",
+              "target": "_self"
             }
+          ],
+          "position": "center"
         },
-        {
-            "id": "andina_cars",
-            "name": "Andina Cars",
-            "domain": "andina.localhost",
-            "defaultLang": "es-ES",
-            "supportedLangs": [
-                "es-ES",
-                "pt-BR"
-            ],
-            "theme": {
-                "primary": "#f97316",
-                "secondary": "#ea580c"
+        "info": {
+          "showCountry": true,
+          "showLanguages": true,
+          "position": "right",
+          "separator": " • "
+        },
+        "styles": {
+          "backgroundColor": "#ffffff",
+          "textColor": "#0a0a0a",
+          "padding": "1rem 2rem",
+          "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
+        }
+      }
+    },
+    {
+      "id": "globex_auto",
+      "name": "Globex Auto",
+      "domain": "globex.localhost",
+      "defaultLang": "en-US",
+      "supportedLangs": [
+        "en-US",
+        "es-ES"
+      ],
+      "theme": {
+        "primary": "#22c55e",
+        "secondary": "#15803d"
+      },
+      "logoUrl": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=200&h=80&fit=crop&q=80",
+      "country": "US",
+      "headerTheme": {
+        "layout": "vertical-stacked",
+        "logo": {
+          "url": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=200&h=80&fit=crop&q=80",
+          "position": "top",
+          "width": 220,
+          "height": 90,
+          "alt": "Logo Globex Auto"
+        },
+        "title": {
+          "text": "GLOBEX AUTO",
+          "position": "below-logo",
+          "fontSize": "2.25rem",
+          "fontWeight": "800",
+          "color": "white"
+        },
+        "menu": {
+          "items": [
+            {
+              "label": "Leilões Ativos",
+              "href": "leiloes",
+              "target": "_self"
             },
-            "logoUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=200&h=80&fit=crop&q=80",
-            "country": "CL",
-            "headerTheme": {
-                "layout": "horizontal-center",
-                "logo": {
-                    "url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=200&h=80&fit=crop&q=80",
-                    "position": "right",
-                    "width": 140,
-                    "height": 55,
-                    "alt": "Logo Andina Cars"
-                },
-                "title": {
-                    "text": "ANDINA CARS",
-                    "position": "center",
-                    "fontSize": "1.875rem",
-                    "fontWeight": "700",
-                    "color": "white"
-                },
-                "menu": {
-                    "items": [
-                        {
-                            "label": "Campañas",
-                            "href": "/anuncios",
-                            "target": "_self"
-                        },
-                        {
-                            "label": "Catálogo",
-                            "href": "/catalogo/andina_cars",
-                            "target": "_self"
-                        },
-                        {
-                            "label": "Precios",
-                            "href": "/precos/ofertas",
-                            "target": "_self"
-                        },
-                        {
-                            "label": "Contacto",
-                            "href": "/personalizado",
-                            "target": "_self"
-                        }
-                    ],
-                    "position": "left"
-                },
-                "info": {
-                    "showCountry": true,
-                    "showLanguages": true,
-                    "position": "right",
-                    "separator": " - "
-                },
-                "styles": {
-                    "backgroundColor": "#f97316",
-                    "textColor": "white",
-                    "padding": "1rem 2rem",
-                    "boxShadow": "0 3px 8px rgba(0,0,0,0.2)"
-                },
-                "additionalContent": [
-                    {
-                        "type": "image",
-                        "content": "Flag",
-                        "position": "right",
-                        "imageUrl": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=40&h=30&fit=crop&q=80"
-                    }
-                ]
+            {
+              "label": "Vender",
+              "href": "vender",
+              "target": "_self"
+            },
+            {
+              "label": "Sobre",
+              "href": "sobre",
+              "target": "_self"
             }
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "tenantId": "acme_motors",
-            "name": "Admin Acme",
-            "email": "admin@acme.com",
-            "password": "password123",
-            "role": "admin"
+          ],
+          "position": "center"
         },
-        {
-            "id": 2,
-            "tenantId": "globex_auto",
-            "name": "Admin Globex",
-            "email": "admin@globex.com",
-            "password": "password123",
-            "role": "admin"
+        "info": {
+          "showCountry": true,
+          "showLanguages": true,
+          "position": "center",
+          "separator": " | "
         },
-        {
-            "id": 3,
-            "tenantId": "andina_cars",
-            "name": "Admin Andina",
-            "email": "admin@andina.com",
-            "password": "password123",
-            "role": "admin"
+        "styles": {
+          "backgroundColor": "#22c55e",
+          "textColor": "white",
+          "padding": "2rem 2rem 1.5rem 2rem",
+          "boxShadow": "0 4px 6px rgba(0,0,0,0.15)",
+          "borderRadius": "0 0 16px 16px"
         },
-        {
-            "id": 4,
-            "tenantId": null,
-            "name": "Super Admin",
-            "email": "super@pock.com",
-            "password": "password123",
-            "role": "super_admin"
-        }
-    ]
+        "additionalContent": [
+          {
+            "type": "text",
+            "content": "Premium Quality",
+            "position": "right"
+          }
+        ]
+      }
+    },
+    {
+      "id": "andina_cars",
+      "name": "Andina Cars",
+      "domain": "andina.localhost",
+      "defaultLang": "es-ES",
+      "supportedLangs": [
+        "es-ES",
+        "pt-BR"
+      ],
+      "theme": {
+        "primary": "#f97316",
+        "secondary": "#ea580c"
+      },
+      "logoUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=200&h=80&fit=crop&q=80",
+      "country": "CL",
+      "headerTheme": {
+        "layout": "horizontal-center",
+        "logo": {
+          "url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=200&h=80&fit=crop&q=80",
+          "position": "right",
+          "width": 140,
+          "height": 55,
+          "alt": "Logo Andina Cars"
+        },
+        "title": {
+          "text": "ANDINA CARS",
+          "position": "center",
+          "fontSize": "1.875rem",
+          "fontWeight": "700",
+          "color": "white"
+        },
+        "menu": {
+          "items": [
+            {
+              "label": "Leilões Ativos",
+              "href": "leiloes",
+              "target": "_self"
+            },
+            {
+              "label": "Vender",
+              "href": "vender",
+              "target": "_self"
+            },
+            {
+              "label": "Sobre",
+              "href": "sobre",
+              "target": "_self"
+            }
+          ],
+          "position": "left"
+        },
+        "info": {
+          "showCountry": true,
+          "showLanguages": true,
+          "position": "right",
+          "separator": " - "
+        },
+        "styles": {
+          "backgroundColor": "#f97316",
+          "textColor": "white",
+          "padding": "1rem 2rem",
+          "boxShadow": "0 3px 8px rgba(0,0,0,0.2)"
+        },
+        "additionalContent": [
+          {
+            "type": "image",
+            "content": "Flag",
+            "position": "right",
+            "imageUrl": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=40&h=30&fit=crop&q=80"
+          }
+        ]
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "tenantId": "acme_motors",
+      "name": "Admin Acme",
+      "email": "admin@acme.com",
+      "password": "password123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "tenantId": "globex_auto",
+      "name": "Admin Globex",
+      "email": "admin@globex.com",
+      "password": "password123",
+      "role": "admin"
+    },
+    {
+      "id": 3,
+      "tenantId": "andina_cars",
+      "name": "Admin Andina",
+      "email": "admin@andina.com",
+      "password": "password123",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "tenantId": null,
+      "name": "Super Admin",
+      "email": "super@pock.com",
+      "password": "password123",
+      "role": "super_admin"
+    }
+  ]
 }

@@ -64,6 +64,7 @@ export interface Campaign {
     validUntil?: string;
     heroImage?: string;
     ctaLabel?: string;
+    tenantName?: string;
 }
 
 export function CampaignCard({ campaign }: { campaign: Campaign }) {
@@ -92,6 +93,13 @@ export function CampaignCard({ campaign }: { campaign: Campaign }) {
                 </div>
             </div>
             <div className="p-6">
+                {campaign.tenantName && (
+                    <div className="mb-2">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
+                            {campaign.tenantName}
+                        </span>
+                    </div>
+                )}
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
                     {title}
                 </h3>

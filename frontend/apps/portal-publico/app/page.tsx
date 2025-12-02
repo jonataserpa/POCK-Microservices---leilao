@@ -13,8 +13,27 @@ async function getCampaigns(): Promise<Campaign[]> {
   }
 }
 
+async function getTenants(): Promise<{ id: string; name: string }[]> {
+  try {
+    const res = await fetch('http://localhost:3001/tenants', { cache: 'no-store' });
+    if (!res.ok) {
+      throw new Error('Failed to fetch tenants');
+    }
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching tenants:", error);
+    return [];
+  }
+}
+
 export default async function Home() {
   const campaigns = await getCampaigns();
+  const tenants = await getTenants();
+
+  const campaignsWithTenant = campaigns.map(campaign => ({
+    ...campaign,
+    tenantName: tenants.find(t => t.id === campaign.tenantId)?.name
+  }));
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
@@ -30,9 +49,9 @@ export default async function Home() {
           </p>
         </div>
 
-        {campaigns.length > 0 ? (
+        {campaignsWithTenant.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {campaigns.map((campaign) => (
+            {campaignsWithTenant.map((campaign) => (
               <CampaignCard key={campaign.id} campaign={campaign} />
             ))}
           </div>

@@ -71,52 +71,51 @@ export default async function CarDetailPage({ params, searchParams }: PageProps)
     }).format(car.priceFrom);
 
     return (
-        <div className="min-h-screen flex flex-col bg-gray-50">
-            <Header title={campaignTitle} tenantId={tenantId} href={`/${tenantId}/${slug}`} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+            <div className="mb-8">
+                <h2 className="text-2xl font-bold text-purple-600">{campaignTitle}</h2>
+                <div className="h-1 w-20 bg-purple-600 mt-2 rounded-full"></div>
+            </div>
 
-            <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-                    <div className="grid grid-cols-1 lg:grid-cols-2">
-                        <div className="h-96 lg:h-auto relative bg-gray-200">
-                            <img
-                                src={car.image}
-                                alt={car.model}
-                                className="w-full h-full object-cover"
-                            />
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
+                    <div className="h-96 lg:h-auto relative bg-gray-200">
+                        <img
+                            src={car.image}
+                            alt={car.model}
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div className="p-8 lg:p-12 flex flex-col justify-center">
+                        <div className="uppercase tracking-wide text-sm text-purple-600 font-bold mb-2">
+                            {car.year}
                         </div>
-                        <div className="p-8 lg:p-12 flex flex-col justify-center">
-                            <div className="uppercase tracking-wide text-sm text-purple-600 font-bold mb-2">
-                                {car.year}
-                            </div>
-                            <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
-                                {car.model}
-                            </h1>
-                            <p className="text-gray-500 text-lg mb-8">
-                                Veículo certificado com garantia de procedência. Inspecionado em mais de 200 itens.
-                            </p>
+                        <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+                            {car.model}
+                        </h1>
+                        <p className="text-gray-500 text-lg mb-8">
+                            Veículo certificado com garantia de procedência. Inspecionado em mais de 200 itens.
+                        </p>
 
-                            <div className="flex items-baseline mb-8">
-                                <span className="text-3xl font-bold text-gray-900 mr-2">{formattedPrice}</span>
-                                <span className="text-gray-500">Lance inicial</span>
-                            </div>
+                        <div className="flex items-baseline mb-8">
+                            <span className="text-3xl font-bold text-gray-900 mr-2">{formattedPrice}</span>
+                            <span className="text-gray-500">Lance inicial</span>
+                        </div>
 
-                            <div className="flex flex-col gap-4">
-                                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-xl text-lg shadow-lg shadow-purple-200 transition-all transform hover:-translate-y-1">
-                                    Dar Lance Agora
-                                </Button>
-                                <button className="w-full bg-white border-2 border-gray-200 hover:border-purple-600 text-gray-700 hover:text-purple-600 font-bold py-4 rounded-xl text-lg transition-colors">
-                                    Agendar Visita
-                                </button>
-                                <a href={`/${tenantId}/${slug}`} className="w-full text-center text-gray-500 hover:text-purple-600 font-medium py-2 transition-colors">
-                                    ← Voltar para a campanha
-                                </a>
-                            </div>
+                        <div className="flex flex-col gap-4">
+                            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-xl text-lg shadow-lg shadow-purple-200 transition-all transform hover:-translate-y-1">
+                                Dar Lance Agora
+                            </Button>
+                            <button className="w-full bg-white border-2 border-gray-200 hover:border-purple-600 text-gray-700 hover:text-purple-600 font-bold py-4 rounded-xl text-lg transition-colors">
+                                Agendar Visita
+                            </button>
+                            <a href={`/${tenantId}/${slug}`} className="w-full text-center text-gray-500 hover:text-purple-600 font-medium py-2 transition-colors">
+                                ← Voltar para a campanha
+                            </a>
                         </div>
                     </div>
                 </div>
-            </main>
-
-            <Footer copyright="Pock Microservices" />
+            </div>
         </div>
     );
 }
