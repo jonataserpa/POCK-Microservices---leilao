@@ -25,7 +25,7 @@ export default function AdminLayout({
   return (
     <div className="min-h-screen bg-gray-50">
       <Sidebar tenantId={tenantId} onLogout={handleLogout} />
-      <TopBar tenantId={tenantId} />
+      <TopBar />
       <main className="ml-64 pt-28 px-12 pb-12">{children}</main>
     </div>
   );

@@ -42,14 +42,11 @@ export default function SettingsPage({ params }: SettingsPageProps) {
   const [titleText, setTitleText] = useState("");
   const [logoUrl, setLogoUrl] = useState("");
 
-  useEffect(() => {
-    fetchTenant();
-  }, [fetchTenant]);
-
   const fetchTenant = useCallback(async () => {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
     try {
       const res = await fetch(`${apiUrl}/tenants?id=${tenantId}`);
+      if (!res.ok) throw new Error("Failed to fetch tenant");
       const data = await res.json();
       if (data && data.length > 0) {
         const t = data[0];
