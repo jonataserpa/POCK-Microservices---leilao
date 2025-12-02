@@ -35,6 +35,13 @@
 - Created `docs/roadmap-execucao.md`.
 - Created `docs/frontend/CHANGELOG.md` (this file).
 
+### Admin Panel (`painel-admin`)
+- **Port Configuration**: Changed default port to 3002 to avoid conflict with `mock-server`.
+- **Login**: Implemented login page with Tenant ID selection (fetched from mock server).
+- **Dashboard**: Created basic dashboard page at `/[tenantId]/dashboard`.
+- **Documentation**: Created `docs/prd/007-especificacao-crud-admin.md` for CRUD specifications.
+- **Mock Data**: Added mock users to `db.json`.
+
 ### Navigation & UI Improvements
 - **Tenant Selection**:
   - Implemented `TenantSelectionModal` component in `ui-kit`.
