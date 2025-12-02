@@ -1,3 +1,4 @@
+import Image from "next/image";
 import * as React from "react";
 
 export interface Car {
@@ -12,7 +13,7 @@ export interface Car {
     campaignSlug?: string;
 }
 
-export function CarCard({ car }: { car: Car }) {
+export function CarCard({ car, priority = false }: { car: Car; priority?: boolean }) {
     const currency = car.currency || 'BRL';
     const formattedPrice = new Intl.NumberFormat(currency === 'BRL' ? 'pt-BR' : 'en-US', {
         style: 'currency',
@@ -26,10 +27,13 @@ export function CarCard({ car }: { car: Car }) {
     return (
         <div className={`group bg-white rounded-xl overflow-hidden border transition-all duration-300 hover:shadow-xl ${car.highlight ? 'border-purple-500 ring-1 ring-purple-500 shadow-lg' : 'border-gray-200 shadow-sm'}`}>
             <div className="relative h-48 overflow-hidden bg-gray-100">
-                <img
+                <Image
                     src={car.image}
                     alt={car.model}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    fill
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={priority}
                 />
                 {car.highlight && (
                     <div className="absolute top-3 right-3">
@@ -54,7 +58,7 @@ export function CarCard({ car }: { car: Car }) {
                         <p className="text-xs text-gray-500 uppercase font-semibold">A partir de</p>
                         <p className="text-xl font-bold text-gray-900">{formattedPrice}</p>
                     </div>
-                    <a href={detailUrl} className="bg-gray-900 hover:bg-purple-600 text-white p-2 rounded-lg transition-colors shadow-sm">
+                    <a href={detailUrl} className="bg-gray-900 hover:bg-purple-600 text-white p-2 rounded-lg transition-colors shadow-sm" aria-label={`Ver detalhes do ${car.model}`}>
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                     </a>
                 </div>

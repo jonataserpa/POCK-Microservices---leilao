@@ -5,9 +5,10 @@ import { usePathname } from "next/navigation";
 
 interface SidebarProps {
     tenantId: string;
+    onLogout?: () => void;
 }
 
-export function Sidebar({ tenantId }: SidebarProps) {
+export function Sidebar({ tenantId, onLogout }: SidebarProps) {
     const pathname = usePathname();
 
     const menuItems = [
@@ -74,7 +75,10 @@ export function Sidebar({ tenantId }: SidebarProps) {
                         <p className="text-xs text-purple-200 truncate">Gerente de Mkt</p>
                     </div>
                 </div>
-                <button className="mt-4 w-full flex items-center justify-center px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-xs font-medium transition-colors border border-white/5">
+                <button
+                    onClick={onLogout}
+                    className="mt-4 w-full flex items-center justify-center px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-xs font-medium transition-colors border border-white/5"
+                >
                     <span className="mr-2">↪</span> Sair
                 </button>
             </div>

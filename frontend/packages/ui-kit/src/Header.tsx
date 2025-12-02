@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { useState } from "react";
+import Image from "next/image";
 import { TenantSelectionModal } from "./TenantSelectionModal";
 
 export interface HeaderTheme {
@@ -44,9 +45,10 @@ export interface HeaderProps {
     tenantId?: string;
     href?: string;
     theme?: HeaderTheme;
+    lang?: string;
 }
 
-export function Header({ title, tenantId, href, theme }: HeaderProps) {
+export function Header({ title, tenantId, href, theme, lang = 'pt-BR' }: HeaderProps) {
     const basePath = tenantId ? `/${tenantId}` : '';
     const link = href || basePath || '/';
 
@@ -75,17 +77,22 @@ export function Header({ title, tenantId, href, theme }: HeaderProps) {
     const layout = theme?.layout || 'horizontal-left';
 
     const Logo = () => (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 relative">
             {theme?.logo?.url ? (
-                <img
-                    src={theme.logo.url}
-                    alt={theme.logo.alt || title || 'Logo'}
-                    style={{
-                        width: 'auto',
-                        height: theme.logo.height || 28, // Smaller default logo
-                        objectFit: 'contain'
-                    }}
-                />
+                <div style={{ position: 'relative', width: 'auto', height: theme.logo.height || 28 }}>
+                    <Image
+                        src={theme.logo.url}
+                        alt={theme.logo.alt || title || 'Logo'}
+                        height={theme.logo.height || 28}
+                        width={theme.logo.width || 100} // Default width if not provided
+                        style={{
+                            objectFit: 'contain',
+                            height: '100%',
+                            width: 'auto'
+                        }}
+                        priority
+                    />
+                </div>
             ) : (
                 <div className="w-7 h-7 bg-purple-600 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-lg">P</span>
@@ -127,8 +134,41 @@ export function Header({ title, tenantId, href, theme }: HeaderProps) {
         </nav>
     );
 
+    const LanguageSelector = () => {
+        if (!theme?.info?.showLanguages) return null;
+
+        const languages = [
+            { code: 'pt-BR', label: 'PT' },
+            { code: 'en-US', label: 'EN' },
+            { code: 'es-ES', label: 'ES' }
+        ];
+
+        const currentLang = lang;
+
+        const handleLangChange = (langCode: string) => {
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', langCode);
+            window.location.href = url.toString();
+        };
+
+        return (
+            <div className="flex items-center gap-2 mr-4 border-r border-gray-300 pr-4">
+                {languages.map((lang) => (
+                    <button
+                        key={lang.code}
+                        onClick={() => handleLangChange(lang.code)}
+                        className={`text-xs font-bold transition-colors ${currentLang === lang.code ? 'text-purple-600' : 'text-gray-500 hover:text-gray-700'}`}
+                    >
+                        {lang.label}
+                    </button>
+                ))}
+            </div>
+        );
+    };
+
     const Actions = () => (
         <div className="flex items-center gap-3">
+            <LanguageSelector />
             <button style={{ color: styles.color }} className="hover:opacity-70 transition-opacity p-1">
                 <span className="sr-only">Buscar</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>

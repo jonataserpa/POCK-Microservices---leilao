@@ -43,6 +43,8 @@ export default function LoginPage() {
         // For now, just redirect to the dashboard of the tenant
         // In a real app, we would validate credentials against an API
         if (formData.tenantId) {
+            // Set a mock auth cookie
+            document.cookie = "auth_token=true; path=/; max-age=86400; SameSite=Lax";
             router.push(`/${formData.tenantId}/dashboard`);
         }
 

@@ -10,7 +10,7 @@ interface LayoutProps {
 
 async function getTenant(tenantId: string) {
     try {
-        const res = await fetch(`http://localhost:3001/tenants?id=${tenantId}`, { cache: 'no-store' });
+        const res = await fetch(`http://localhost:3001/tenants?id=${tenantId}`, { next: { revalidate: 60 } });
         if (!res.ok) return null;
         const tenants = await res.json();
         return tenants[0] || null;

@@ -1,10 +1,9 @@
-export * from "./CarCard";
+import Image from "next/image";
 import * as React from "react";
 
+export * from "./CarCard";
 export * from "./Button";
-
 export * from "./card";
-
 export * from "./Header";
 export * from "./Input";
 export * from "./Select";
@@ -19,25 +18,25 @@ export function Footer({ copyright }: { copyright: string }) {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                     <div>
                         <h3 className="text-lg font-bold mb-4">Pock Microservices</h3>
-                        <p className="text-gray-400 text-sm">Plataforma premium de leilões automotivos.</p>
+                        <p className="text-gray-300 text-sm">Plataforma premium de leilões automotivos.</p>
                     </div>
                     <div>
                         <h4 className="font-semibold mb-4 text-purple-400">Plataforma</h4>
-                        <ul className="space-y-2 text-sm text-gray-400">
+                        <ul className="space-y-2 text-sm text-gray-300">
                             <li><a href="#" className="hover:text-white transition-colors">Como funciona</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">Preços</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-semibold mb-4 text-purple-400">Suporte</h4>
-                        <ul className="space-y-2 text-sm text-gray-400">
+                        <ul className="space-y-2 text-sm text-gray-300">
                             <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">Contato</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-semibold mb-4 text-purple-400">Legal</h4>
-                        <ul className="space-y-2 text-sm text-gray-400">
+                        <ul className="space-y-2 text-sm text-gray-300">
                             <li><a href="#" className="hover:text-white transition-colors">Termos de Uso</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">Privacidade</a></li>
                         </ul>
@@ -65,9 +64,10 @@ export interface Campaign {
     heroImage?: string;
     ctaLabel?: string;
     tenantName?: string;
+    lang?: string;
 }
 
-export function CampaignCard({ campaign }: { campaign: Campaign }) {
+export function CampaignCard({ campaign, priority = false }: { campaign: Campaign; priority?: boolean }) {
     const status = campaign.status || 'active';
     const image = campaign.heroImage || 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop';
     const title = campaign.title || campaign.name;
@@ -77,10 +77,13 @@ export function CampaignCard({ campaign }: { campaign: Campaign }) {
     return (
         <div className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
             <div className="relative h-56 overflow-hidden">
-                <img
+                <Image
                     src={image}
                     alt={title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={priority}
                 />
                 <div className="absolute top-4 left-4">
                     <span className="bg-white/90 backdrop-blur-sm text-purple-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-sm">
