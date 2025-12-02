@@ -34,3 +34,20 @@
 ### Documentation
 - Created `docs/roadmap-execucao.md`.
 - Created `docs/frontend/CHANGELOG.md` (this file).
+
+### Navigation & UI Improvements
+- **Tenant Selection**:
+  - Implemented `TenantSelectionModal` component in `ui-kit`.
+  - Updated `Header` to trigger modal when menu links are clicked without a tenant context (Root Page).
+- **Routing Fixes**:
+  - Fixed 404 on Tenant Home Route (`/[tenantId]`) by redirecting to `/[tenantId]/leiloes`.
+  - Fixed 404 on Car Detail Page (`/[tenantId]/[slug]/car/[carId]`).
+  - Added "Back to Campaign" button on Car Detail Page.
+  - Fixed Header Title link on Car Detail Page to redirect back to the Campaign Page.
+- **Root Page**:
+  - Fixed `CampaignCard` links on the homepage to correctly redirect to dynamic campaign routes.
+
+### Documentation & Repository
+- **Git**: Initialized repository and pushed to GitHub.
+- **README**: Updated `README.md` with comprehensive project documentation, architecture overview, and setup instructions.
+
