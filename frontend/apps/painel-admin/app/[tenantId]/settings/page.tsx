@@ -68,6 +68,10 @@ export default function SettingsPage({ params }: SettingsPageProps) {
     }
   }, [tenantId]);
 
+  useEffect(() => {
+    fetchTenant();
+  }, [fetchTenant]);
+
   const handleSave = async () => {
     if (!tenant) return;
     setSaving(true);
