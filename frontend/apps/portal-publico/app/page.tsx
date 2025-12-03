@@ -2,7 +2,8 @@ import { Header, Footer, CampaignCard, Campaign } from "@repo/ui-kit";
 
 async function getCampaigns(): Promise<Campaign[]> {
   try {
-    const res = await fetch("http://localhost:3001/campaigns", {
+    const apiUrl = process.env.API_URL || "http://localhost:3001";
+    const res = await fetch(`${apiUrl}/campaigns`, {
       next: { revalidate: 60 },
     });
     if (!res.ok) {
@@ -17,7 +18,8 @@ async function getCampaigns(): Promise<Campaign[]> {
 
 async function getTenants(): Promise<{ id: string; name: string }[]> {
   try {
-    const res = await fetch("http://localhost:3001/tenants", {
+    const apiUrl = process.env.API_URL || "http://localhost:3001";
+    const res = await fetch(`${apiUrl}/tenants`, {
       next: { revalidate: 60 },
     });
     if (!res.ok) {
