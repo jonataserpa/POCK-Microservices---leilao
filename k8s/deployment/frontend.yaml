@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: painel-admin
-          image: registry.gitlab.com/jonataserpa/painel-admin:latest
+          image: registry.gitlab.com/jonataserpa/pock-microservice/painel-admin:latest
           ports:
             - containerPort: 3000
           env:
@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
         - name: portal-publico
-          image: registry.gitlab.com/jonataserpa/portal-publico:latest
+          image: registry.gitlab.com/jonataserpa/pock-microservice/portal-publico:latest
           ports:
             - containerPort: 3000
           env:
@@ -89,7 +89,7 @@ spec:
     spec:
       containers:
         - name: mock-server
-          image: registry.gitlab.com/jonataserpa/mock-server:latest
+          image: registry.gitlab.com/jonataserpa/pock-microservice/mock-server:latest
           ports:
             - containerPort: 3001
           resources:
