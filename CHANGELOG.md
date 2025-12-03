@@ -67,3 +67,6 @@
 - **Logout**: Implemented functional logout in `painel-admin` that clears session and redirects to login.
 - **Route Protection**: Added Middleware to `painel-admin` to protect tenant routes (`/[tenantId]/*`) requiring authentication.
 - **Sidebar**: Updated `Sidebar` component in `ui-kit` to support `onLogout` callback.
+
+### Planning
+- **Tenant CRUD**: Created `docs/prd/tenant_crud_prd.md` defining requirements for Tenant management (Create, Read, Update, Delete).
