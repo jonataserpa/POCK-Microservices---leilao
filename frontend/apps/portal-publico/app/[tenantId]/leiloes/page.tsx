@@ -9,10 +9,9 @@ interface PageProps {
 async function getCampaigns(tenantId: string): Promise<Campaign[]> {
   try {
     const apiUrl = process.env.API_URL || "http://localhost:3001";
-    const res = await fetch(
-      `${apiUrl}/campaigns?tenantId=${tenantId}`,
-      { cache: "no-store" },
-    );
+    const res = await fetch(`${apiUrl}/campaigns?tenantId=${tenantId}`, {
+      cache: "no-store",
+    });
     if (!res.ok) return [];
     return res.json();
   } catch (error) {
