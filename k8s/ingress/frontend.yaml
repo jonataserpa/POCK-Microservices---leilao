@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`painel-admin.jonataserpa.com.br`)
+    - match: Host(`painel-admin.jonataserpa.com.br`) || Host(`painel-admin.38.242.232.109.nip.io`)
       kind: Rule
       services:
         - name: painel-admin
@@ -24,7 +24,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`portal.jonataserpa.com.br`)
+    - match: Host(`portal.jonataserpa.com.br`) || Host(`portal.38.242.232.109.nip.io`)
       kind: Rule
       services:
         - name: portal-publico
@@ -41,7 +41,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`api.jonataserpa.com.br`)
+    - match: Host(`api.jonataserpa.com.br`) || Host(`api.38.242.232.109.nip.io`)
       kind: Rule
       services:
         - name: mock-server
@@ -58,7 +58,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`painel-admin.jonataserpa.com.br`) || Host(`portal.jonataserpa.com.br`) || Host(`api.jonataserpa.com.br`)
+    - match: Host(`painel-admin.jonataserpa.com.br`) || Host(`portal.jonataserpa.com.br`) || Host(`api.jonataserpa.com.br`) || Host(`painel-admin.38.242.232.109.nip.io`) || Host(`portal.38.242.232.109.nip.io`) || Host(`api.38.242.232.109.nip.io`)
       kind: Rule
       services:
         - name: noop-service # This is just a placeholder, the middleware handles the redirect
