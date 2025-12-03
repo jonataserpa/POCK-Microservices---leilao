@@ -9,9 +9,45 @@ interface Tenant {
     name: string;
     domain: string;
     defaultLang: string;
-    theme?: {
+    supportedLangs: string[];
+    theme: {
         primary: string;
         secondary: string;
+    };
+    logoUrl?: string;
+    country?: string;
+    headerTheme?: {
+        layout: string;
+        logo: {
+            url: string;
+            position: string;
+            width: number;
+            height: number;
+            alt: string;
+        };
+        title: {
+            text: string;
+            position: string;
+            fontSize: string;
+            fontWeight: string;
+            color: string;
+        };
+        menu: {
+            items: Array<{ label: string; href: string; target: string }>;
+            position: string;
+        };
+        info: {
+            showCountry: boolean;
+            showLanguages: boolean;
+            position: string;
+            separator: string;
+        };
+        styles: {
+            backgroundColor: string;
+            textColor: string;
+            padding: string;
+            boxShadow: string;
+        };
     };
 }
 
