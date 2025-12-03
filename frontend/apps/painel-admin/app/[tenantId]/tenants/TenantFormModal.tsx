@@ -278,7 +278,7 @@ export default function TenantFormModal({
     } catch (error) {
       if (error instanceof z.ZodError) {
         const newErrors: Record<string, string> = {};
-        error.errors.forEach((err) => {
+        error.issues.forEach((err) => {
           newErrors[err.path.join(".")] = err.message;
         });
         setErrors(newErrors);
