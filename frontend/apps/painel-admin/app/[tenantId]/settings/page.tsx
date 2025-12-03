@@ -43,7 +43,8 @@ export default function SettingsPage({ params }: SettingsPageProps) {
   const [logoUrl, setLogoUrl] = useState("");
 
   const fetchTenant = useCallback(async () => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+    const apiUrl =
+      process.env.NEXT_PUBLIC_API_URL || "https://api.jonataserpa.com.br";
     try {
       const res = await fetch(`${apiUrl}/tenants?id=${tenantId}`);
       if (!res.ok) throw new Error("Failed to fetch tenant");
@@ -96,7 +97,8 @@ export default function SettingsPage({ params }: SettingsPageProps) {
     };
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+      const apiUrl =
+        process.env.NEXT_PUBLIC_API_URL || "https://api.jonataserpa.com.br";
       await fetch(`${apiUrl}/tenants/${tenant.id}`, {
         method: "PATCH",
         headers: {
