@@ -53,6 +53,9 @@ jobs:
           - context: ./frontend
             image: painel-admin
             dockerfile: ./frontend/apps/painel-admin/Dockerfile
+          - context: ./frontend/apps/mock-server
+            image: mock-server
+            dockerfile: ./frontend/apps/mock-server/Dockerfile
 
     steps:
       - name: Checkout repository
