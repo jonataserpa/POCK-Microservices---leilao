@@ -116,4 +116,5 @@ jobs:
             cd ~/pock-microservices
             kubectl apply -f k8s/deployment/frontend.yaml
             kubectl apply -f k8s/service/frontend.yaml
+            kubectl apply -f k8s/ingress/frontend.yaml
             kubectl rollout restart deployment/portal-publico deployment/painel-admin deployment/mock-server

@@ -21,7 +21,7 @@ spec:
         - name: painel-admin
           image: registry.gitlab.com/jonataserpa/pock-microservice/painel-admin:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 3002
           env:
             - name: NODE_ENV
               value: "production"
