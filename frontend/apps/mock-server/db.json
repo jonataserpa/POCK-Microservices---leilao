@@ -1109,7 +1109,7 @@
           "separator": " • "
         },
         "styles": {
-          "backgroundColor": "#856b6b",
+          "backgroundColor": "#ffffff",
           "textColor": "#0a0a0a",
           "padding": "1rem 2rem",
           "boxShadow": "0 2px 4px rgba(0,0,0,0.1)"
