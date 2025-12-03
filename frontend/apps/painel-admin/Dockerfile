@@ -24,7 +24,8 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Build the project
-RUN npx turbo run build --filter=painel-admin --verbosity=3
+WORKDIR /app/apps/painel-admin
+RUN npm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner
