@@ -114,6 +114,7 @@ jobs:
           password: ${{ secrets.VPS_PASSWORD }}
           script: |
             cd ~/pock-microservices
+            kubectl apply -f k8s/pvc/mock-server.yaml
             kubectl apply -f k8s/deployment/frontend.yaml
             kubectl apply -f k8s/service/frontend.yaml
             kubectl apply -f k8s/ingress/frontend.yaml

@@ -98,6 +98,16 @@ spec:
           image: registry.gitlab.com/jonataserpa/pock-microservice/mock-server:latest
           ports:
             - containerPort: 3001
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              if [ ! -f /data/db.json ]; then
+                cp /app/db.json /data/db.json;
+              fi;
+              json-server /data/db.json --port 3001 --host 0.0.0.0
+          volumeMounts:
+            - name: mock-data
+              mountPath: /data
           resources:
             requests:
               memory: "64Mi"
@@ -105,3 +115,7 @@ spec:
             limits:
               memory: "256Mi"
               cpu: "200m"
+      volumes:
+        - name: mock-data
+          persistentVolumeClaim:
+            claimName: mock-server-pvc
