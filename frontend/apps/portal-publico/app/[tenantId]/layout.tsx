@@ -10,7 +10,8 @@ interface LayoutProps {
 
 async function getTenant(tenantId: string) {
   try {
-    const res = await fetch(`http://localhost:3001/tenants?id=${tenantId}`, {
+    const apiUrl = process.env.API_URL || "http://localhost:3001";
+    const res = await fetch(`${apiUrl}/tenants?id=${tenantId}`, {
       next: { revalidate: 60 },
     });
     if (!res.ok) return null;

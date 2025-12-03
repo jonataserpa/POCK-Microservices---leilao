@@ -39,9 +39,10 @@ async function getCarDetails(
 ): Promise<{ car: CarDetail; campaignTitle: string } | null> {
   try {
     // Fetch campaign to find the car
+    const apiUrl = process.env.API_URL || "http://localhost:3001";
     const res = await fetch(
-      `http://localhost:3001/campaigns?tenantId=${tenantId}&slug=${slug}&lang=${lang}`,
-      { cache: "no-store" },
+      `${apiUrl}/campaigns?tenantId=${tenantId}&slug=${slug}&lang=${lang}`,
+      { next: { revalidate: 60 } },
     );
     if (!res.ok) return null;
 
