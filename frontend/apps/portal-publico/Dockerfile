@@ -24,6 +24,8 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Build the project
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 RUN npx turbo run build --filter=portal-publico
 
 # Production image, copy all the files and run next

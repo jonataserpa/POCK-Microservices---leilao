@@ -27,6 +27,8 @@ COPY --from=deps /app/packages ./packages
 
 # Build the project
 WORKDIR /app/apps/painel-admin
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 RUN npm run build
 
 # Production image, copy all the files and run next
