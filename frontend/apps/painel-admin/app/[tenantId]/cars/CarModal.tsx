@@ -6,7 +6,10 @@ import { z } from "zod";
 
 const carSchema = z.object({
   model: z.string().min(1, "Modelo é obrigatório"),
-  year: z.number().min(1900, "Ano inválido").max(new Date().getFullYear() + 1, "Ano inválido"),
+  year: z
+    .number()
+    .min(1900, "Ano inválido")
+    .max(new Date().getFullYear() + 1, "Ano inválido"),
   priceFrom: z.number().min(0, "Preço deve ser maior ou igual a 0"),
   image: z.string().url("URL da imagem inválida").optional().or(z.literal("")),
   highlight: z.boolean(),
