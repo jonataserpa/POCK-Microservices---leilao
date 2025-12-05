@@ -2,6 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { Modal, Input, Select, Button } from "@repo/ui-kit";
+import { z } from "zod";
+
+const carSchema = z.object({
+  model: z.string().min(1, "Modelo é obrigatório"),
+  year: z.number().min(1900, "Ano inválido").max(new Date().getFullYear() + 1, "Ano inválido"),
+  priceFrom: z.number().min(0, "Preço deve ser maior ou igual a 0"),
+  image: z.string().url("URL da imagem inválida").optional().or(z.literal("")),
+  highlight: z.boolean(),
+});
 
 interface Car {
   id?: number;
@@ -44,6 +53,7 @@ export function CarModal({
   const [selectedCampaignId, setSelectedCampaignId] = useState<number | "">(
     initialCampaignId || "",
   );
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   useEffect(() => {
     if (initialData) {
@@ -59,15 +69,30 @@ export function CarModal({
       });
       setSelectedCampaignId(initialCampaignId || "");
     }
+    setErrors({});
   }, [initialData, initialCampaignId, isOpen]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setErrors({});
+
     if (!selectedCampaignId) {
       alert("Selecione uma campanha");
       return;
     }
-    onSubmit(formData, Number(selectedCampaignId));
+
+    try {
+      carSchema.parse(formData);
+      onSubmit(formData, Number(selectedCampaignId));
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const newErrors: Record<string, string> = {};
+        error.issues.forEach((err) => {
+          newErrors[err.path.join(".")] = err.message;
+        });
+        setErrors(newErrors);
+      }
+    }
   };
 
   const campaignOptions = campaigns.map((c) => ({
@@ -96,6 +121,9 @@ export function CarModal({
           onChange={(e) => setFormData({ ...formData, model: e.target.value })}
           required
         />
+        {errors.model && (
+          <p className="text-red-500 text-xs mt-1">{errors.model}</p>
+        )}
         <div className="grid grid-cols-2 gap-4">
           <Input
             label="Ano"
@@ -106,6 +134,9 @@ export function CarModal({
             }
             required
           />
+          {errors.year && (
+            <p className="text-red-500 text-xs mt-1">{errors.year}</p>
+          )}
           <Input
             label="Preço (A partir de)"
             type="number"
@@ -115,12 +146,18 @@ export function CarModal({
             }
             required
           />
+          {errors.priceFrom && (
+            <p className="text-red-500 text-xs mt-1">{errors.priceFrom}</p>
+          )}
         </div>
         <Input
           label="URL da Imagem"
           value={formData.image}
           onChange={(e) => setFormData({ ...formData, image: e.target.value })}
         />
+        {errors.image && (
+          <p className="text-red-500 text-xs mt-1">{errors.image}</p>
+        )}
         <div className="flex items-center">
           <input
             id="highlight"
